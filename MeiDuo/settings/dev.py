@@ -14,6 +14,7 @@ import os
 import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# 注意此处的BASE_DIR的目录不是与项目目录同级,而是与下一级的MeiDuo同一级
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 添加导包路径,实现app注册的简化
@@ -40,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 'MeiDuo.apps.users.apps.UsersConfig',  # 未添加导包路径时的注册app
-    'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
     'rest_framework',  # 注册drf
+    'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
 ]
 
 MIDDLEWARE = [
@@ -144,7 +145,9 @@ CACHES = {
         }
     }
 }
+# 指定session使用缓存进行保存
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+# 缓存设置保存在redis
 SESSION_CACHE_ALIAS = "session"
 
 # 日志配置
@@ -194,3 +197,6 @@ REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
 }
+
+# 告知Django认证系统使用我们自定义的模型类
+AUTH_USER_MODEL = 'users.User'
