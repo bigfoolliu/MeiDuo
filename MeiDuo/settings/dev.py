@@ -11,9 +11,13 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# 添加导包路径,实现app注册的简化
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -35,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'MeiDuo.apps.users.apps.UsersConfig',
+    # 'MeiDuo.apps.users.apps.UsersConfig',  # 未添加导包路径时的注册app
+    'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
 ]
 
 MIDDLEWARE = [
