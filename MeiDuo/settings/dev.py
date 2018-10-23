@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework',  # 注册drf
     'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
     'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端
+    'verifications.apps.VerificationsConfig',  # 注册验证应用
 ]
 
 MIDDLEWARE = [
