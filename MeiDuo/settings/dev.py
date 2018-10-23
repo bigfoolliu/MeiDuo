@@ -29,7 +29,13 @@ SECRET_KEY = 'qo*ssi=br(+5c67v_7d1v_lmkvkxaip&z@)^mw95d-x73gh9y^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 修改默认的localhost为不同的域名,进行访问
+ALLOWED_HOSTS = [
+    'api.meiduo.site',
+    '127.0.0.1',
+    'localhost',
+    'www.meiduo.site'
+]
 
 # Application definition
 
@@ -198,5 +204,5 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
 }
 
-# 告知Django认证系统使用我们自定义的模型类
+# 告知Django认证系统使用我们自定义的模型类,而不继续使用django自带的里面的类
 AUTH_USER_MODEL = 'users.User'

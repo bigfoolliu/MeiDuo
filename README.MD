@@ -50,3 +50,8 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 + 用户的数据模型
 + 用户密码的加密与验证
 + 用户的权限系统
+
+## 设置域名
+
++ 前端	www.meiduo.site
++ 后端	api.meiduo.site
