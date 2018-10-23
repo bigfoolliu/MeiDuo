@@ -49,9 +49,11 @@ INSTALLED_APPS = [
     # 'MeiDuo.apps.users.apps.UsersConfig',  # 未添加导包路径时的注册app
     'rest_framework',  # 注册drf
     'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
+    'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # 支持跨域访问的中间件
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -206,3 +208,14 @@ REST_FRAMEWORK = {
 
 # 告知Django认证系统使用我们自定义的模型类,而不继续使用django自带的里面的类
 AUTH_USER_MODEL = 'users.User'
+
+# cors(跨域访问配置)
+# 添加白名单,凡是出现在白名单中的域名，都可以访问后端接口
+CORS_ORIGIN_WHITELIST = (
+    '127.0.0.1:8080',
+    'localhost:8080',
+    'www.meiduo.site:8080',
+    'api.meiduo.site:8000',
+)
+# 指明在跨域访问中，后端是否支持对cookie的操作
+CORS_ALLOW_CREDENTIALS = True
