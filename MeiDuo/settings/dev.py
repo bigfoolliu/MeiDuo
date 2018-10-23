@@ -189,3 +189,8 @@ LOGGING = {
     }
 }
 
+# drf配置
+REST_FRAMEWORK = {
+    # 异常处理
+    'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
+}
