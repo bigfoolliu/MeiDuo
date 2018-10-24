@@ -48,8 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 'MeiDuo.apps.users.apps.UsersConfig',  # 未添加导包路径时的注册app
     'rest_framework',  # 注册drf
-    'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
     'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端
+    'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
     'verifications.apps.VerificationsConfig',  # 注册验证应用
 ]
 

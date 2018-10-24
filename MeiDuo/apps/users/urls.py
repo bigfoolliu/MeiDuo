@@ -6,5 +6,7 @@ from django.urls import path, re_path
 from .views import *
 
 urlpatterns = [
-    path('', index),  # 写空则可以直接通过./users/访问
+    path('', index),
+    re_path('usernames/(?P<username>\w{5,20})/count/', UsernameCountView.as_view()),
+    re_path('mobiles/(?P<mobile>1[3-9]\d{9})/count/', MobileCountView.as_view()),
 ]
