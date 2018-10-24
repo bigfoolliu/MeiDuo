@@ -175,3 +175,27 @@ mobile      str     是      手机号
 }
 ```
 
+#### JWT
+
+Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准（(RFC 7519).
+不再使用Session认证机制, 而使用Json Web Token认证机制.
+
+JWT的组成:
+
++ 头部(header),声明类型(jwt)和声明加密的算法(通常为hmac sha256)
++ 载荷(payload),存放标准中注册的声明、公共的声明和私有的声明
++ 签证(signature),由header(base64加密后的)、payload(base64加密后的)和secret(保存在服务器)组成
+
+```text
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
+TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+```
+
+基于token的鉴权机制流程:
+
++ 用户使用用户名密码来请求服务器
++ 服务器进行验证用户的信息
++ 服务器通过验证发送给用户一个token
++ 客户端存储token，并在每次请求时附送上这个token值
++ 服务端验证token值，并返回数据

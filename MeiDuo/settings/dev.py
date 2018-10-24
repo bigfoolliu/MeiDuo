@@ -213,6 +213,18 @@ LOGGING = {
 REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
+    # 身份认证的顺序：jwt,session,basic(一删除)
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',  # 前后端分离使用jwt验证
+        'rest_framework.authentication.SessionAuthentication',  # # 访问admin后台仍然使用session认证
+    ),
+}
+
+# 配置jwt
+import datetime
+JWT_AUTH = {
+    # jwt的token有效时间设为2小时
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=2),
 }
 
 # 告知Django认证系统使用我们自定义的模型类,而不继续使用django自带的里面的类

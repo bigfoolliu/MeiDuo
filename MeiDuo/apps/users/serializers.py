@@ -11,6 +11,7 @@ import re
 
 from django_redis import get_redis_connection
 from rest_framework import serializers
+from rest_framework_jwt.settings import api_settings
 
 from users.models import User
 
@@ -21,6 +22,7 @@ class UserCreateSerializer(serializers.Serializer):
     """
     # 定义属性
     id = serializers.IntegerField(read_only=True)  # 只输出到客户端,不接收
+    token = serializers.CharField(read_only=True)  # 想要token作为属性,需要定义
     username = serializers.CharField(
         min_length=5,
         max_length=20,
@@ -110,6 +112,15 @@ class UserCreateSerializer(serializers.Serializer):
         # 用户的密码需要加密,所以需要调用函数进行加密
         user.set_password(validated_data.get('password'))
         user.save()
+
+        """
+        利用jwt生成token值,并将其作为user的属性添加至用户
+        """
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+        payload = jwt_payload_handler(user)
+        token = jwt_encode_handler(payload)  # 创建token,header.payload.signature
+        user.token = token  # 将token作为属性赋给用户
 
         return user
 
