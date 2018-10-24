@@ -97,7 +97,13 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 
 启动celery服务
 
-进入到终端, 编写如下命令执行:
+进入到终端, 编写如下命令执行(linux):
 ```
 celery -A celery_tasks.main worker -l info
+```
+
+win10上运行celery4.x会出现这个问题,需要安装一个包并在执行的时候添加参数:
+```
+pip install eventlet
+celery -A celery_tasks.main worker -l info -P eventlet
 ```

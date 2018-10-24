@@ -53,8 +53,8 @@ class SMSCodeView(APIView):
         # print(code)
 
         # 调用celery任务,执行耗时代码(发送短信验证码,前提是首先在后台通过命令行将任务跑起来)
-        # send_sms_code.delay(mobile, code, constants.SMS_CODE_EXPIRES/60, 1)
+        send_sms_code.delay(mobile, code, constants.SMS_CODE_EXPIRES/60, 1)
         # TODO: 测试用代码
-        test_func.delay()
+        # test_func.delay()
 
         return Response({'message': 'Fine'})
