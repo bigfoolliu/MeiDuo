@@ -160,3 +160,11 @@ WARNING 2018-10-24 20:14:43,185 log 228 Not Found: /users/
 WARNING 2018-10-24 20:14:43,186 basehttp 124 "POST /users/ HTTP/1.1" 404 2680
 INFO 2018-10-24 20:14:43,189 basehttp 124 "GET /mobiles/13135651103/count/ HTTP/1.1" 200 34
 INFO 2018-10-24 20:14:43,196 basehttp 124 "GET /usernames/tonyliu/count/ HTTP/1.1" 200 32
+INFO 2018-10-24 21:26:42,289 basehttp 124 "GET /usernames/tonyliu/count/ HTTP/1.1" 200 32
+INFO 2018-10-24 21:26:50,614 basehttp 124 "GET /mobiles/13135651103/count/ HTTP/1.1" 200 34
+INFO 2018-10-24 21:26:50,734 basehttp 124 "GET /mobiles/13135651103/count/ HTTP/1.1" 200 34
+INFO 2018-10-24 21:26:50,796 basehttp 124 "GET /sms_code/13135651103/ HTTP/1.1" 200 18
+INFO 2018-10-24 21:27:07,076 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-10-24 21:27:07,082 basehttp 124 "GET /usernames/tonyliu/count/ HTTP/1.1" 200 32
+INFO 2018-10-24 21:27:07,083 basehttp 124 "GET /mobiles/13135651103/count/ HTTP/1.1" 200 34
+INFO 2018-10-24 21:27:07,224 basehttp 124 "POST /users/ HTTP/1.1" 201 52

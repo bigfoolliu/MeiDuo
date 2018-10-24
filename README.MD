@@ -90,6 +90,7 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 等候短信验证码是一个耗时代码,在使用框架的基础上,可以使用该包来实现异步.
 
 #### 构成如下:
+
 + task: 任务-------->函数,封装了耗时代码
 + broker: 代理人---->指定队列保存位置,如redis
 + worker: 工人------>从队列中获取任务并执行
@@ -98,11 +99,13 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 启动celery服务
 
 进入到终端, 编写如下命令执行(linux):
+
 ```text
 celery -A celery_tasks.main worker -l info
 ```
 
 win10上运行celery4.x会出现这个问题,需要安装一个包并在执行的时候添加参数:
+
 ```text
 pip install eventlet
 celery -A celery_tasks.main worker -l info -P eventlet
@@ -115,6 +118,7 @@ celery -A celery_tasks.main worker -l info -P eventlet
 + 访问方式:  GET usernames/(?P<username>\w{5,20})/count/
 + 请求参数: username: str,必须有,用户名
 + 返回数据: username: str,必须有,用户名; count: int,必须有,数量
+
 ```json
 {
     "username": "itcast",
@@ -129,9 +133,45 @@ celery -A celery_tasks.main worker -l info -P eventlet
 + 访问方式:  GET mobiles/(?P<mobile>1[3-9]\d{9})/count/
 + 请求参数: mobile: str,必须有,用户名
 + 返回数据: mobile: str,必须有,手机号; count: int,必须有,数量
+
 ```json
 {
     "mobile": "13112341234",
     "count": "1"
 }
 ```
+
+### 具体注册
+
+#### 后端接口设计
+
++ 访问方式:  POST /users/
++ 请求参数:
+
+```text
+参数名          类型    是否必须     说明
+username        str	是          用户名
+password        str	是          密码
+password2       str	是          确认密码
+sms_code        str	是          短信验证码
+mobile          str	是          手机号
+allow           str	是          是否同意用户协议
+```
+
++ 返回数据:
+
+```text
+返回值      类型    是否必须    说明
+id          int     是      用户id
+username    str     是      用户名
+mobile      str     是      手机号
+
+```
+
+```json
+{
+    "mobile": "13112341234",
+    "count": "1"
+}
+```
+
