@@ -8,8 +8,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django_redis import get_redis_connection
 
-from utils.ytx_sdk.sendSMS import CCP
+from MeiDuo.utils.ytx_sdk.sendSMS import CCP
 from verifications import constants
+from celery_tasks.sms.tasks import send_sms_code, test_func
 
 
 class SMSCodeView(APIView):
@@ -49,6 +50,11 @@ class SMSCodeView(APIView):
         sendSMS.py文件中的类CCP的实例执行sendTemplateSMS()方法来执行发送
         """
         # CCP.sendTemplateSMS(mobile, code, constants.SMS_CODE_EXPIRES/60, 1)
-        print(code)
+        # print(code)
 
-        return Response('ok,ok')
+        # 调用celery任务,执行耗时代码(发送短信验证码,前提是首先在后台通过命令行将任务跑起来)
+        # send_sms_code.delay(mobile, code, constants.SMS_CODE_EXPIRES/60, 1)
+        # TODO: 测试用代码
+        test_func.delay()
+
+        return Response({'message': 'Fine'})

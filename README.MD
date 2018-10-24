@@ -10,20 +10,22 @@
 > Meiduo
 >> front_end_pc
 >>
+>> celery_tasks
+>>
 >> MeiDuo
->>> apps 存放Dajango应用
+>>> apps------>存放Dajango应用
 >>>
->>> logs 存放日志文件
+>>> logs------>存放日志文件
 >>>
->>> settings 存放配置文件的目录，分为开发dev和线上prod
+>>> settings-->存放配置文件的目录，分为开发dev和线上prod
 >>>
->>> utils 存放项目自己定义的公共函数或类等
+>>> utils----->存放项目自己定义的公共函数或类等
 >>>
->>> docs 用于存放一些说明文档资料
+>>> docs------>用于存放一些说明文档资料
 >>>
->>> scripts 用于存放管理脚本文件
+>>> scripts--->用于存放管理脚本文件
 >>>
->>> libs 存放第三方的库文件
+>>> libs------>存放第三方的库文件
 >>>
 >> templates
 >>
@@ -32,7 +34,8 @@
 >> manage.py
 >>
 >> README.MD
->>
+>> 
+
 
 ## 用户模型类
 
@@ -75,10 +78,26 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 2. 生成短信验证码
 3. 保存短信验证码与发送记录
 4. 发送短信
-
+   
 #### 后端接口设计
 
 + 访问方式:  GET /sms_code/(?P<mobile>1[3-9]\d{9})/
 + 请求参数: mobile str 必须有 手机号
 + 返回数据: message str 非必传 OK,发送成功 格式为JSON
 
+### celery
+
+等候短信验证码是一个耗时代码,在使用框架的基础上,可以使用该包来实现异步.
+
+构成如下:
++ task: 任务-------->函数,封装了耗时代码
++ broker: 代理人---->指定队列保存位置,如redis
++ worker: 工人------>从队列中获取任务并执行
++ queue: 队列------->先进先出,维护任务的先后顺序
+
+启动celery服务
+
+进入到终端, 编写如下命令执行:
+```
+celery -A celery_tasks.main worker -l info
+```
