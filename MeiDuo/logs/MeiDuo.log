@@ -180,3 +180,7 @@ INFO 2018-10-26 20:32:31,126 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 20
 INFO 2018-10-26 20:32:31,395 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 176
 INFO 2018-10-26 21:34:46,385 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
 INFO 2018-10-26 21:34:46,517 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-26 22:06:37,409 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-10-26 22:06:37,564 log 228 Bad Request: /authorizations/
+WARNING 2018-10-26 22:06:37,565 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-10-26 22:06:40,534 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209

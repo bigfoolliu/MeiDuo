@@ -242,3 +242,9 @@ CORS_ORIGIN_WHITELIST = (
 )
 # 指明在跨域访问中，后端是否支持对cookie的操作
 CORS_ALLOW_CREDENTIALS = True
+
+
+# 指定登录时的认证后端
+AUTHENTICATION_BACKENDS = [
+    'users.utils.MyModelBackend',
+]
