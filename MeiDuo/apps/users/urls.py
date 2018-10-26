@@ -4,10 +4,12 @@
 # !@github: bigfoolliu
 from django.urls import path, re_path
 from .views import *
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     path('', index),
     re_path('usernames/(?P<username>\w{5,20})/count/', UsernameCountView.as_view()),
     re_path('mobiles/(?P<mobile>1[3-9]\d{9})/count/', MobileCountView.as_view()),
     path('users/', UserCreateView.as_view()),
+    path('authorizations/', obtain_jwt_token),  # 接收username和password,返回一个JSON Web Token
 ]

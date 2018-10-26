@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from users.models import User
 from users.serializers import UserCreateSerializer
-
+from rest_framework_jwt.utils import jwt_response_payload_handler
 # Create your views here.
 
 

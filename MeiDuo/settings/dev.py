@@ -225,6 +225,8 @@ import datetime
 JWT_AUTH = {
     # jwt的token有效时间设为2小时
     'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=2),
+    # 指定登录认证时返回的数据(调用的函数)
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
 }
 
 # 告知Django认证系统使用我们自定义的模型类,而不继续使用django自带的里面的类

@@ -176,3 +176,7 @@ INFO 2018-10-24 22:07:06,778 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
 INFO 2018-10-24 22:07:06,785 basehttp 124 "GET /usernames/tonyliu1/count/ HTTP/1.1" 200 33
 INFO 2018-10-24 22:07:06,786 basehttp 124 "GET /mobiles/13135651104/count/ HTTP/1.1" 200 34
 INFO 2018-10-24 22:07:06,912 basehttp 124 "POST /users/ HTTP/1.1" 201 229
+INFO 2018-10-26 20:32:31,126 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-26 20:32:31,395 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 176
+INFO 2018-10-26 21:34:46,385 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-26 21:34:46,517 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209

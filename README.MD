@@ -7,7 +7,7 @@
 
 ### 目录说明
 
-> Meiduo
+> MeiDuo
 >> front_end_pc
 >>
 >> celery_tasks
@@ -187,9 +187,9 @@ JWT的组成:
 + 签证(signature),由header(base64加密后的)、payload(base64加密后的)和secret(保存在服务器)组成
 
 ```text
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
-TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.(第一部分)
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.(第二部分)
+TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ(第三部分)
 ```
 
 基于token的鉴权机制流程:
@@ -199,3 +199,35 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 + 服务器通过验证发送给用户一个token
 + 客户端存储token，并在每次请求时附送上这个token值
 + 服务端验证token值，并返回数据
+
+## 登录业务
+
+使用Django自带的用户认证系统(django.contrib.auth).
+
+认证系统包含：
++ 用户
++ 权限：二元（是/否）标志指示一个用户是否可以做一个特定的任务。
++ 组：对多个用户运用标签和权限的一种通用的方式。
++ 一个可配置的密码哈希系统
++ 用户登录或内容显示的表单和视图
++ 一个可插拔的后台系统
+
+### 后端接口设计
+
++ 访问方式:  POST /authorizations/
++ 请求参数:
+
+```text
+参数名          类型    是否必须     说明
+username        str	是          用户名
+password        str	是          密码
+```
+
++ 返回数据
+
+```text
+参数名          类型    是否必须     说明
+username        str	是          用户名
+user_id         int	是          用户id
+token           str 是          身份认证凭据
+```
