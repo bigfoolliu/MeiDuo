@@ -34,8 +34,6 @@
 >> manage.py
 >>
 >> README.MD
->> 
-
 
 ## 用户模型类
 
@@ -56,8 +54,8 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 
 ## 设置域名
 
-+ 前端	www.meiduo.site
-+ 后端	api.meiduo.site
++ 前端: www.meiduo.site
++ 后端: api.meiduo.site
 
 前后端访问使用不同的域名,所以当端访问前端的数据时,需要添加CORS(跨域访问)的配置.
 
@@ -89,7 +87,7 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 
 等候短信验证码是一个耗时代码,在使用框架的基础上,可以使用该包来实现异步.
 
-#### 构成如下:
+#### 构成如下
 
 + task: 任务-------->函数,封装了耗时代码
 + broker: 代理人---->指定队列保存位置,如redis
@@ -204,7 +202,8 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ(第三部分)
 
 使用Django自带的用户认证系统(django.contrib.auth).
 
-认证系统包含：
+认证系统包含:
+
 + 用户
 + 权限：二元（是/否）标志指示一个用户是否可以做一个特定的任务。
 + 组：对多个用户运用标签和权限的一种通用的方式。
@@ -219,15 +218,26 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ(第三部分)
 
 ```text
 参数名          类型    是否必须     说明
-username        str	是          用户名
-password        str	是          密码
+username        str     是          用户名
+password        str     是          密码
 ```
 
-+ 返回数据
++ 返回数据:
 
 ```text
 参数名          类型    是否必须     说明
-username        str	是          用户名
-user_id         int	是          用户id
-token           str 是          身份认证凭据
+username        str     是          用户名
+user_id         int     是          用户id
+token           str     是          身份认证凭据
 ```
+
+### 第三方登录--QQ登录
+
+步骤:
+
+1. 首先成为qq互联的开发者,需注册
+2. 创建应用,获取项目的appid(应用的唯一标识)和appkey(appid对应的密钥)
+3. 放置“QQ登录”按钮_OAuth2.0
+4. 获取Authorization Code(GET方式请求网址:https://graph.qq.com/oauth2.0/authorize 并携带参数)
+5. 通过Authorization_Code获取Access_Token(GET方式请求网址:https://graph.qq.com/oauth2.0/token 并携带参数)
+6. 通过Access Token,得到对应用户身份的OpenID(网站上或应用中唯一对应用户身份的标识,网站或应用可将此ID进行存储，便于用户下次登录时辨识其身份，或将其与用户在网站上或应用中的原有账号进行绑定)
