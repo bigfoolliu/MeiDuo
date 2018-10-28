@@ -194,3 +194,74 @@ INFO 2018-10-26 22:20:45,759 basehttp 124 "GET /sms_code/13112345678 HTTP/1.1" 3
 INFO 2018-10-26 22:21:45,249 basehttp 124 "GET /sms_code/13112345678/ HTTP/1.1" 200 18
 INFO 2018-10-26 22:22:11,630 basehttp 124 "POST /users/ HTTP/1.1" 201 229
 INFO 2018-10-26 22:24:30,034 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 211
+INFO 2018-10-28 11:28:47,037 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 11:30:03,322 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+WARNING 2018-10-28 11:31:21,032 log 228 Not Found: /oauth/qq/user/
+WARNING 2018-10-28 11:31:21,032 basehttp 124 "GET /oauth/qq/user/?code=F99375BC7082B2B652C4061E54644588 HTTP/1.1" 404 3226
+WARNING 2018-10-28 11:31:44,652 log 228 Not Found: /oauth/qq/user/
+WARNING 2018-10-28 11:31:44,652 basehttp 124 "GET /oauth/qq/user/?code=F99375BC7082B2B652C4061E54644588 HTTP/1.1" 404 3226
+INFO 2018-10-28 11:32:50,562 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 11:33:06,797 basehttp 124 "GET /oauth/qq/user/?code=89F527DEEB80D6A429C43AF799EA99D7 HTTP/1.1" 200 233
+INFO 2018-10-28 11:33:21,142 basehttp 124 "GET /sms_code/13135651103/ HTTP/1.1" 200 18
+INFO 2018-10-28 11:33:38,829 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+INFO 2018-10-28 11:33:38,960 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 209
+INFO 2018-10-28 11:35:01,571 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 11:35:26,955 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 11:35:55,953 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 11:36:22,728 basehttp 124 "GET /oauth/qq/user/?code=836C32982193893A74A57958359DC801 HTTP/1.1" 200 233
+INFO 2018-10-28 11:36:36,639 basehttp 124 "GET /sms_code/13135651103/ HTTP/1.1" 200 18
+INFO 2018-10-28 11:36:54,641 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 11:36:54,765 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:36:54,766 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:36:56,739 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:36:56,739 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:36:58,037 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:36:58,037 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:36:58,194 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:36:58,194 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:36:58,343 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:36:58,343 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:36:58,513 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:36:58,513 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:37:04,158 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:37:04,159 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:37:04,383 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:37:04,384 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:37:04,521 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:37:04,521 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:37:04,684 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:37:04,685 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:37:04,832 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:37:04,832 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+WARNING 2018-10-28 11:37:04,991 log 228 Bad Request: /oauth/qq/user/
+WARNING 2018-10-28 11:37:04,992 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 31
+ERROR 2018-10-28 11:37:06,460 qq_sdk 66 code=None msg=None
+ERROR 2018-10-28 11:37:08,216 log 228 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\PythonProjects\MeiDuo\MeiDuo\apps\oauth\views.py", line 58, in get
+    token = oauthqq.get_access_token(code)
+  File "D:\PythonProjects\MeiDuo\MeiDuo\apps\oauth\qq_sdk.py", line 67, in get_access_token
+    raise Exception('获取access token失败')
+Exception: 获取access token失败
+ERROR 2018-10-28 11:37:08,220 basehttp 124 "GET /oauth/qq/user/?code=836C32982193893A74A57958359DC801 HTTP/1.1" 500 21523
+INFO 2018-10-28 11:37:39,169 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 11:37:50,266 basehttp 124 "GET /oauth/qq/user/?code=80C4BD2534D82BC07DE284AD9B44ED73 HTTP/1.1" 200 233
+INFO 2018-10-28 11:37:59,136 basehttp 124 "GET /sms_code/13135651104/ HTTP/1.1" 200 18
+INFO 2018-10-28 11:38:10,331 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+INFO 2018-10-28 11:38:10,460 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 211

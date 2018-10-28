@@ -241,3 +241,76 @@ token           str     是          身份认证凭据
 4. 获取Authorization Code(GET方式请求网址:https://graph.qq.com/oauth2.0/authorize 并携带参数)
 5. 通过Authorization_Code获取Access_Token(GET方式请求网址:https://graph.qq.com/oauth2.0/token 并携带参数)
 6. 通过Access Token,得到对应用户身份的OpenID(网站上或应用中唯一对应用户身份的标识,网站或应用可将此ID进行存储，便于用户下次登录时辨识其身份，或将其与用户在网站上或应用中的原有账号进行绑定)
+
+### urllib:
+
+在后端接口中，我们需要向QQ服务器发送请求，查询用户的QQ信息，Python提供了标准模块urllib可以帮助我们发送http请求。
+
++ urllib.parse.urlencode(query)------将query字典转换为url路径中的查询字符串
++ urllib.parse.parse_qs(qs)------将qs查询字符串格式数据转换为python的字典
++ urllib.request.urlopen(url, data=None)------发送http请求，如果data为None，发送GET请求，如果data不为None，发送POST请求
+返回response响应对象，可以通过read()读取响应体数据，需要注意读取出的响应体数据为bytes类型
+
+### 返回QQ登录网址后端接口设计
+
++ 访问方式:  GET /oauth/qq/authorization/?next=xxx
++ 请求参数:  查询字符串
+
+```text
+参数名  类型    是否必须     说明
+next    str     否        用户QQ登录成功后进入美多商城的哪个网址
+```
+
++ 返回数据:
+
+```text
+参数名          类型    是否必须     说明
+login_url      str     是          qq登录网址
+```
+
+### QQ登录回调处理
+
+本项目中,QQ登录开发资质时配置的回调地址为：
+http://www.meiduo.site:8080/oauth_callback.html
+
++ 访问方式:  GET /oauth/qq/user/?code=xxx
++ 请求参数:  查询字符串
+
+```text
+参数名  类型    是否必须     说明
+code    str     是        qq返回的授权凭证code
+```
+
++ 返回数据:
+
+```text
+参数名          类型    是否必须     说明
+access_token   str     否         用户是第一次使用QQ登录时返回，其中包含openid，用于绑定身份使用，注意这个是我们自己生成的
+token          str     否         用户不是第一次使用QQ登录时返回，登录成功的JWT token
+username       str     否         用户不是第一次使用QQ登录时返回，用户名
+user_id        int     否         用户不是第一次使用QQ登录时返回，用户id
+```
+
+### 绑定用户接口
+
+用户是首次使用QQ登录，则需要绑定用户.
+
++ 访问方式:  GET /oauth/qq/user/
++ 请求参数:  查询字符串
+
+```text
+参数名           类型    是否必须     说明
+mobile          str	    是	        手机号
+password	    str	    是       	密码
+sms_code	    str	    是	        短信验证码
+access_token	str	    是	        凭据 （包含openid)
+```
+
++ 返回数据:
+
+```text
+参数名       类型    是否必须     说明
+token	    str	    是	        JWT token
+id	        int	    是	        用户id
+username	str	    是	        用户名
+```

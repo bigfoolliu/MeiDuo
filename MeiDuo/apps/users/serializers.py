@@ -116,9 +116,9 @@ class UserCreateSerializer(serializers.Serializer):
         """
         利用jwt生成token值,并将其作为user的属性添加至用户
         """
-        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
-        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
-        payload = jwt_payload_handler(user)
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER  # 指定使用配置的payload_handler
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER  # 指定配置的encode_handler
+        payload = jwt_payload_handler(user)  # 将用户传入生成payload
         token = jwt_encode_handler(payload)  # 创建token,header.payload.signature
         user.token = token  # 将token作为属性赋给用户
 

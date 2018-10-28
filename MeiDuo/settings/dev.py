@@ -249,3 +249,9 @@ CORS_ALLOW_CREDENTIALS = True
 AUTHENTICATION_BACKENDS = [
     'users.utils.MyModelBackend',
 ]
+
+# 添加QQ登录的配置信息
+QQ_CLIENT_ID = '101474184'  # 注册申请的appid
+QQ_CLIENT_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'  # 注册申请的appkey
+QQ_REDIRECT_URI = 'http://www.meiduo.site:8080/oauth_callback.html'  # 回调地址,即根据qq账号是否有绑定的账户显示不同
+QQ_STATE = '/'  # 登录成功成功之后返回到网站的哪个页面
