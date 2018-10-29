@@ -8,10 +8,13 @@
 用TimedJSONWebSignatureSerializer可以生成带有有效期的token
 服务端使用该token向QQ服务器请求来获取openid
 """
-
+import logging
 
 from itsdangerous import TimedJSONWebSignatureSerializer
 from django.conf import settings
+
+
+logger = logging.getLogger('django')
 
 
 def dumps(data, expires):
@@ -42,6 +45,6 @@ def loads(data, expires):
         data_dict = serializer.loads(data)
         return data_dict
     except Exception as e:
-        print(e)  # TODO: 之后用logger替代
+        logger.error(e)
         # 超出异常的原因: 超时
         return None

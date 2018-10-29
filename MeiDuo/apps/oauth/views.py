@@ -1,3 +1,5 @@
+import logging
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -12,6 +14,8 @@ from oauth.qq_sdk import OAuthQQ
 from oauth.serializes import QQBindSerializer
 from MeiDuo.utils import tjws
 from MeiDuo.utils.jwt_token import generate
+
+logger = logging.getLogger('django')
 
 
 # 127.0.0.1:8000/oauth/qq/authorization/?next=
@@ -64,7 +68,7 @@ class QQLoginView(APIView):
         try:
             qquser = QQUser.objects.get(openid=openid)
         except Exception as e:
-            print(e)  # TODO: 之后用logger替代
+            logger.error(e)
             # 如果不存在,则通知客户端的转到绑定页面
             # 将openid加密进行输出
             data = tjws.dumps({'openid': openid}, constants.BIND_TOKEN_EXPIRES)

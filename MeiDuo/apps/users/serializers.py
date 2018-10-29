@@ -124,3 +124,23 @@ class UserCreateSerializer(serializers.Serializer):
 
         return user
 
+
+class UserDetailSerializer(serializers.ModelSerializer):
+    """
+    用户中心序列化器
+    """
+
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'mobile', 'email', 'email_active']
+
+
+class EmailSerializer(serializers.ModelSerializer):
+    """
+    验证邮箱
+    """
+
+    class Meta:
+        model = User
+        fields = ['email']
+

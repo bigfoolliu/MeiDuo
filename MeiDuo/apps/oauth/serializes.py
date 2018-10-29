@@ -7,12 +7,17 @@
 """
 进行将qq账号绑定原有账户的序列化器
 """
+import logging
+
 from rest_framework import serializers
 
 from oauth import constants
 from oauth.models import QQUser
 from users.models import User
 from MeiDuo.utils import tjws
+
+
+logger = logging.getLogger('django')
 
 
 class QQBindSerializer(serializers.Serializer):
@@ -59,7 +64,7 @@ class QQBindSerializer(serializers.Serializer):
         try:
             user = User.objects.get(mobile=mobile)
         except Exception as e:
-            print(e)  # TODO: 之后用logger替代
+            logger.error(e)
             # 没有对应一个用户,所以创建一个用户
             user = User()
             user.mobile = mobile
@@ -77,4 +82,30 @@ class QQBindSerializer(serializers.Serializer):
         qquser.save()
 
         return qquser
+
+
+class EmailSerializer(serializers.ModelSerializer):
+    """
+    邮箱序列化器
+    """
+
+    class Meta:
+        model = User
+        fields = ['email']
+
+    def update(self, instance, validated_data):
+        """
+        修改用户的邮箱状态
+        :param instance:
+        :param validated_data:
+        :return:
+        """
+        pass
+
+
+class EmailActiveSerializer(serializers.Serializer):
+    """
+    邮箱激活序列化器
+    """
+    pass
 

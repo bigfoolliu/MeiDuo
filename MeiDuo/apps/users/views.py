@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from rest_framework.generics import CreateAPIView
+from rest_framework.generics import CreateAPIView, UpdateAPIView, RetrieveAPIView
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from rest_framework.views import APIView
 from users.models import User
-from users.serializers import UserCreateSerializer
+from users.serializers import UserCreateSerializer, EmailSerializer, UserDetailSerializer
 
 from rest_framework_jwt.utils import jwt_response_payload_handler
 from django.contrib.auth.backends import ModelBackend
@@ -78,3 +79,38 @@ class UserCreateView(CreateAPIView):
     """
     serializer_class = UserCreateSerializer
 
+
+# api.meiduo.site:8000/user/
+class UserDetailView(RetrieveAPIView):
+    """
+    显示用户个人中心后端接口
+    """
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserDetailSerializer
+
+    def get_object(self):
+        """
+        RetrieveAPIView视图中封装好的代码，默认是根据主键查询得到的对象
+        需求：不根据pk查，而是获取登录的用户,所以直接从request中将user返回
+        解决：重写get_object()方法
+        :return:
+        """
+        return self.request.user
+
+
+# api.meiduo.site:8000/emails/
+class EmailView(UpdateAPIView):
+    """
+    添加邮箱视图接口,即在输入邮箱之后的点击'保存'按钮
+    """
+    # 声明序列化器
+    serializer_class = EmailSerializer
+    # 权限判断,要求用户登录才行,request.user才有意义
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        """
+        这里根据谁登录来进行更改,不需要query_set查询,所以要对该方法进行重写
+        :return:
+        """
+        return self.request.user

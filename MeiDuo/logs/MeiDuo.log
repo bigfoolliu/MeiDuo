@@ -265,3 +265,95 @@ INFO 2018-10-28 11:37:50,266 basehttp 124 "GET /oauth/qq/user/?code=80C4BD2534D8
 INFO 2018-10-28 11:37:59,136 basehttp 124 "GET /sms_code/13135651104/ HTTP/1.1" 200 18
 INFO 2018-10-28 11:38:10,331 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
 INFO 2018-10-28 11:38:10,460 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 211
+INFO 2018-10-29 08:48:27,217 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-29 08:48:27,430 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-29 08:48:27,507 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-29 08:48:27,559 log 228 Not Found: /user/
+WARNING 2018-10-29 08:48:27,559 basehttp 124 "GET /user/ HTTP/1.1" 404 3097
+WARNING 2018-10-29 08:48:27,857 log 228 Not Found: /user/
+WARNING 2018-10-29 08:48:27,857 basehttp 124 "GET /user/ HTTP/1.1" 404 3097
+INFO 2018-10-29 08:48:47,414 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+WARNING 2018-10-29 08:48:47,424 log 228 Not Found: /emails/
+WARNING 2018-10-29 08:48:47,425 basehttp 124 "PUT /emails/ HTTP/1.1" 404 3103
+WARNING 2018-10-29 08:48:55,897 log 228 Not Found: /areas/
+INFO 2018-10-29 08:48:55,897 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-10-29 08:48:55,898 basehttp 124 "GET /areas/ HTTP/1.1" 404 3100
+WARNING 2018-10-29 08:48:55,923 log 228 Not Found: /addresses/
+WARNING 2018-10-29 08:48:55,924 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3112
+WARNING 2018-10-29 08:48:59,945 log 228 Not Found: /user/
+WARNING 2018-10-29 08:48:59,945 basehttp 124 "GET /user/ HTTP/1.1" 404 3097
+INFO 2018-10-29 20:51:50,445 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-29 20:51:50,712 log 228 Not Found: /user/
+WARNING 2018-10-29 20:51:50,715 log 228 Not Found: /user/
+WARNING 2018-10-29 20:51:50,716 basehttp 124 "GET /user/ HTTP/1.1" 404 3251
+WARNING 2018-10-29 20:51:50,716 basehttp 124 "GET /user/ HTTP/1.1" 404 3251
+ERROR 2018-10-29 20:51:50,774 basehttp 124 "GET /user/ HTTP/1.1" 500 59
+INFO 2018-10-29 20:52:22,375 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-29 20:52:22,518 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+WARNING 2018-10-29 20:52:24,723 log 228 Not Found: /user/
+WARNING 2018-10-29 20:52:24,724 basehttp 124 "GET /user/ HTTP/1.1" 404 3251
+INFO 2018-10-29 20:54:26,058 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-29 20:54:26,105 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-29 21:05:25,313 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-10-29 21:05:27,591 log 228 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\utils\functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 1304, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `name` is not valid for model `User`.
+ERROR 2018-10-29 21:05:27,598 basehttp 124 "GET /user/ HTTP/1.1" 500 23228
+INFO 2018-10-29 21:05:56,731 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+INFO 2018-10-29 21:05:56,802 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-29 21:05:56,822 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 21:05:56,822 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 21:06:18,612 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-29 21:06:18,755 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-10-29 21:06:24,683 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+WARNING 2018-10-29 21:06:24,733 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 21:06:24,734 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 21:07:28,790 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-29 21:07:28,834 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 21:07:28,834 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+WARNING 2018-10-29 21:07:36,207 log 228 Not Found: /areas/
+INFO 2018-10-29 21:07:36,208 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-10-29 21:07:36,208 basehttp 124 "GET /areas/ HTTP/1.1" 404 3406
+WARNING 2018-10-29 21:07:36,231 log 228 Not Found: /addresses/
+WARNING 2018-10-29 21:07:36,232 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3418
+INFO 2018-10-29 21:07:43,932 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-29 21:07:43,977 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 21:07:43,978 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
