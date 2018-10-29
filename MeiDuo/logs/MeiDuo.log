@@ -357,3 +357,8 @@ WARNING 2018-10-29 21:07:36,232 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3418
 INFO 2018-10-29 21:07:43,932 basehttp 124 "GET /user/ HTTP/1.1" 200 84
 WARNING 2018-10-29 21:07:43,977 log 228 Not Found: /browse_histories/
 WARNING 2018-10-29 21:07:43,978 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 21:14:25,215 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-29 21:14:25,490 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 21:14:25,491 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 21:14:30,915 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-29 21:14:30,951 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35

@@ -14,6 +14,7 @@ from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 
 from users.models import User
+from celery_tasks.email.tasks import send_verify_email
 
 
 class UserCreateSerializer(serializers.Serializer):
@@ -143,4 +144,22 @@ class EmailSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['email']
+
+    def update(self, instance, validated_data):
+        """
+        默认的只是修改属性并保存,因此,
+        重写该方法,在修改属性之后,需要向邮箱发送邮件
+        :param instance:
+        :param validated_data:
+        :return:
+        """
+        # 获取用户填入的email并修改保存至数据库
+        email = validated_data.get('email')
+        instance.email = email
+        instance.save()
+
+        # 发送激活邮件,由于是耗时任务,交给celery进行多线程处理
+        send_verify_email.delay(email, instance.generate_verify_url())
+
+        return instance
 
