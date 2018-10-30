@@ -222,6 +222,14 @@ REST_FRAMEWORK = {
     ),
 }
 
+# 对地区进行缓存配置
+REST_FRAMEWORK_EXTENSIONS = {
+    # 缓存时间
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 60,
+    # 缓存存储
+    'DEFAULT_USE_CACHE': 'default',  # 这里指定的CACHES里面的缓存方案
+}
+
 # 配置jwt
 import datetime
 JWT_AUTH = {

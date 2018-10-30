@@ -11,6 +11,8 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 from areas.models import Area
 from areas.serializers import AreaSerializer, AreaSubSerializer
 
+from rest_framework_extensions.mixins import CacheResponseMixin
+
 
 # class AreaListView(ListAPIView):
 #     """
@@ -30,7 +32,7 @@ from areas.serializers import AreaSerializer, AreaSubSerializer
 #     # get方法
 
 
-class AreaViewSet(ReadOnlyModelViewSet):
+class AreaViewSet(CacheResponseMixin, ReadOnlyModelViewSet):
     """
     视图集来合并上面的两个View
     这里不能直接指定queryset和serializer_class,因为上述查询的方式和序列化器均不一样

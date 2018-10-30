@@ -367,7 +367,7 @@ token   str     是        用于验证邮箱的token
 message     str     是          验证处理结果
 ```
 
-## 收获地址
+## 收货地址
 
 主要的业务逻辑有：
 
@@ -410,3 +410,24 @@ id      int     是          上级区划id（省份id或城市id）
 name    str     是          上级区划的名称
 subs    list[]  是          下属所有区划信息
 ```
+
+### 缓存
+
+通过pip安装扩展 drf-extensions来实现地址的缓存,从而不必每次都从数据库里进行数据查找.
+
+使用方式:
+
+1. 直接在视图的请求方法上添加装饰器 @cache_response(timeout=60*60, cache='default')
+2. 使用drf-extensions提供的扩展类
+
+        ListCacheResponseMixin
+        用于缓存返回列表数据的视图，与ListModelMixin扩展类配合使用，实际是为list方法添加了cache_response装饰器
+
+        RetrieveCacheResponseMixin
+        用于缓存返回单一数据的视图，与RetrieveModelMixin扩展类配合使用，实际是为retrieve方法添加了cache_response装饰器
+
+        CacheResponseMixin
+        为视图集同时补充List和Retrieve两种缓存，与ListModelMixin和RetrieveModelMixin一起配合使用。
+
+实际使用时可以直接在视图集里继承一下该类即可.我们想把缓存数据保存在redis中，且设置有效期，可以通过在配置文件中定义的方式来实现
+
