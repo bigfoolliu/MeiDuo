@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     'verifications.apps.VerificationsConfig',  # 注册验证应用
     'oauth.apps.OauthConfig',  # 注册第三方登录应用
     'areas.apps.AreasConfig',  # 注册地区应用
+    'goods.apps.GoodsConfig',  # 注册商品应用
+    'contents.apps.ContentsConfig',  # 注册另一商品应用
 ]
 
 MIDDLEWARE = [

@@ -87,7 +87,7 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 
 等候短信验证码是一个耗时代码,在使用框架的基础上,可以使用该包来实现异步.
 
-#### 构成如下
+构成如下:
 
 + task: 任务-------->函数,封装了耗时代码
 + broker: 代理人---->指定队列保存位置,如redis
@@ -117,12 +117,12 @@ celery -A celery_tasks.main worker -l info -P eventlet
 + 请求参数: username: str,必须有,用户名
 + 返回数据: username: str,必须有,用户名; count: int,必须有,数量
 
-```json
-{
-    "username": "itcast",
-    "count": "1"
-}
-```
+    ```json
+    {
+        "username": "itcast",
+        "count": "1"
+    }
+    ```
 
 ### 判断手机号是否存在
 
@@ -132,12 +132,12 @@ celery -A celery_tasks.main worker -l info -P eventlet
 + 请求参数: mobile: str,必须有,用户名
 + 返回数据: mobile: str,必须有,手机号; count: int,必须有,数量
 
-```json
-{
-    "mobile": "13112341234",
-    "count": "1"
-}
-```
+    ```json
+    {
+        "mobile": "13112341234",
+        "count": "1"
+    }
+    ```
 
 ### 具体注册
 
@@ -146,32 +146,31 @@ celery -A celery_tasks.main worker -l info -P eventlet
 + 访问方式:  POST /users/
 + 请求参数:
 
-```text
-参数名          类型    是否必须     说明
-username        str     是          用户名
-password        str     是          密码
-password2       str     是          确认密码
-sms_code        str     是          短信验证码
-mobile          str     是          手机号
-allow           str     是          是否同意用户协议
-```
+    ```text
+    参数名          类型    是否必须     说明
+    username        str     是          用户名
+    password        str     是          密码
+    password2       str     是          确认密码
+    sms_code        str     是          短信验证码
+    mobile          str     是          手机号
+    allow           str     是          是否同意用户协议
+    ```
 
 + 返回数据:
 
-```text
-返回值      类型    是否必须    说明
-id          int     是      用户id
-username    str     是      用户名
-mobile      str     是      手机号
+    ```text
+    返回值      类型    是否必须      说明
+    id          int     是          用户id
+    username    str     是          用户名
+    mobile      str     是          手机号
+    ```
 
-```
-
-```json
-{
-    "mobile": "13112341234",
-    "count": "1"
-}
-```
+    ```json
+    {
+        "mobile": "13112341234",
+        "count": "1"
+    }
+    ```
 
 #### JWT
 
@@ -184,11 +183,11 @@ JWT的组成:
 + 载荷(payload),存放标准中注册的声明、公共的声明和私有的声明
 + 签证(signature),由header(base64加密后的)、payload(base64加密后的)和secret(保存在服务器)组成
 
-```text
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.(第一部分)
-eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.(第二部分)
-TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ(第三部分)
-```
+    ```text
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.(第一部分)
+    eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.(第二部分)
+    TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ(第三部分)
+    ```
 
 基于token的鉴权机制流程:
 
@@ -216,20 +215,20 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ(第三部分)
 + 访问方式:  POST /authorizations/
 + 请求参数:
 
-```text
-参数名          类型    是否必须     说明
-username        str     是          用户名
-password        str     是          密码
-```
+    ```text
+    参数名          类型    是否必须     说明
+    username        str     是          用户名
+    password        str     是          密码
+    ```
 
 + 返回数据: JSON
 
-```text
-参数名          类型    是否必须     说明
-username        str     是          用户名
-user_id         int     是          用户id
-token           str     是          身份认证凭据
-```
+    ```text
+    参数名          类型    是否必须     说明
+    username        str     是          用户名
+    user_id         int     是          用户id
+    token           str     是          身份认证凭据
+    ```
 
 ### 第三方登录--QQ登录
 
@@ -255,17 +254,17 @@ token           str     是          身份认证凭据
 + 访问方式:  GET /oauth/qq/authorization/?next=xxx
 + 请求参数:  查询字符串
 
-```text
-参数名  类型    是否必须     说明
-next    str     否        用户QQ登录成功后进入美多商城的哪个网址
-```
+    ```text
+    参数名  类型    是否必须     说明
+    next    str     否        用户QQ登录成功后进入美多商城的哪个网址
+    ```
 
 + 返回数据: JSON
 
-```text
-参数名          类型    是否必须     说明
-login_url      str     是          qq登录网址
-```
+    ```text
+    参数名          类型    是否必须     说明
+    login_url      str     是          qq登录网址
+    ```
 
 ### QQ登录回调处理
 
@@ -275,20 +274,20 @@ http://www.meiduo.site:8080/oauth_callback.html
 + 访问方式:  GET /oauth/qq/user/?code=xxx
 + 请求参数:  查询字符串
 
-```text
-参数名  类型    是否必须     说明
-code    str     是        qq返回的授权凭证code
-```
+    ```text
+    参数名  类型    是否必须     说明
+    code    str     是        qq返回的授权凭证code
+    ```
 
 + 返回数据: JSON
 
-```text
-参数名          类型    是否必须     说明
-access_token   str     否         用户是第一次使用QQ登录时返回，其中包含openid，用于绑定身份使用，注意这个是我们自己生成的
-token          str     否         用户不是第一次使用QQ登录时返回，登录成功的JWT token
-username       str     否         用户不是第一次使用QQ登录时返回，用户名
-user_id        int     否         用户不是第一次使用QQ登录时返回，用户id
-```
+    ```text
+    参数名          类型    是否必须     说明
+    access_token   str     否         用户是第一次使用QQ登录时返回，其中包含openid，用于绑定身份使用，注意这个是我们自己生成的
+    token          str     否         用户不是第一次使用QQ登录时返回，登录成功的JWT token
+    username       str     否         用户不是第一次使用QQ登录时返回，用户名
+    user_id        int     否         用户不是第一次使用QQ登录时返回，用户id
+    ```
 
 ### 绑定用户接口
 
@@ -297,22 +296,22 @@ user_id        int     否         用户不是第一次使用QQ登录时返回�
 + 访问方式:  GET /oauth/qq/user/
 + 请求参数:  查询字符串
 
-```text
-参数名           类型    是否必须     说明
-mobile          str     是          手机号
-password        str     是          密码
-sms_code        str     是          短信验证码
-access_token    str     是          凭据(包含openid)
-```
+    ```text
+    参数名           类型    是否必须     说明
+    mobile          str     是          手机号
+    password        str     是          密码
+    sms_code        str     是          短信验证码
+    access_token    str     是          凭据(包含openid)
+    ```
 
 + 返回数据: JSON
 
-```text
-参数名       类型    是否必须     说明
-token       str     是          JWT token
-id          int     是          用户id
-username    str     是          用户名
-```
+    ```text
+    参数名       类型    是否必须     说明
+    token       str     是          JWT token
+    id          int     是          用户id
+    username    str     是          用户名
+    ```
 
 ## 邮件验证
 
@@ -334,38 +333,38 @@ send_mail(subject, message, from_email, recipient_list,html_message=None)
 
 ### 发送邮件后端接口
 
-+ 访问方式:  PUT /emails/
++ 访问方式:  PUT emails/
 + 请求参数:  JSON或表单
 
-```text
-参数名  类型    是否必须     说明
-email   str     是        Email邮箱
-```
+    ```text
+    参数名  类型    是否必须     说明
+    email   str     是        Email邮箱
+    ```
 
 + 返回数据: JSON
 
-```text
-参数名  类型    是否必须     说明
-id      int     是          用户id
-email   str     是          Email邮箱
-```
+    ```text
+    参数名  类型    是否必须     说明
+    id      int     是          用户id
+    email   str     是          Email邮箱
+    ```
 
 ### 验证邮件后端接口
 
 + 访问方式:  GET /emails/verification/?token=xxx
 + 请求参数:  查询字符串
 
-```text
-参数名  类型    是否必须     说明
-token   str     是        用于验证邮箱的token
-```
+    ```text
+    参数名  类型    是否必须     说明
+    token   str     是        用于验证邮箱的token
+    ```
 
 + 返回数据: JSON
 
-```text
-参数名      类型    是否必须     说明
-message     str     是          验证处理结果
-```
+    ```text
+    参数名      类型    是否必须     说明
+    message     str     是          验证处理结果
+    ```
 
 ## 收货地址
 
@@ -386,30 +385,30 @@ message     str     是          验证处理结果
 
 + 返回数据: JSON
 
-```text
-参数名  类型    是否必须     说明
-id      int     是          省份id
-name    str     是          省份名称
-```
+    ```text
+    参数名  类型    是否必须     说明
+    id      int     是          省份id
+    name    str     是          省份名称
+    ```
 
 ### 请求城市或区县后端接口
 
 + 访问方式:  GET areas/(?P<pk>\d+)/
 + 请求参数:  路径参数
 
-```text
-参数名  类型    是否必须     说明
-pk      int     是          上级区划id（省份id用于获取城市数据，或城市id用于获取区县数据）
-```
+    ```text
+    参数名  类型    是否必须     说明
+    pk      int     是          上级区划id（省份id用于获取城市数据，或城市id用于获取区县数据）
+    ```
 
 + 返回数据: JSON
 
-```text
-参数名  类型    是否必须     说明
-id      int     是          上级区划id（省份id或城市id）
-name    str     是          上级区划的名称
-subs    list[]  是          下属所有区划信息
-```
+    ```text
+    参数名  类型    是否必须     说明
+    id      int     是          上级区划id（省份id或城市id）
+    name    str     是          上级区划的名称
+    subs    list[]  是          下属所有区划信息
+    ```
 
 ### 缓存
 
@@ -429,5 +428,7 @@ subs    list[]  是          下属所有区划信息
         CacheResponseMixin
         为视图集同时补充List和Retrieve两种缓存，与ListModelMixin和RetrieveModelMixin一起配合使用。
 
-实际使用时可以直接在视图集里继承一下该类即可.我们想把缓存数据保存在redis中，且设置有效期，可以通过在配置文件中定义的方式来实现
+实际使用时可以直接在视图集里继承一下该类即可.我们想把缓存数据保存在redis中，且设置有效期，可以通过在配置文件中定义的方式来实现.
+
+### 用户地址管理
 
