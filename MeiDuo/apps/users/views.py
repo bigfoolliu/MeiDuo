@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from rest_framework.generics import CreateAPIView, UpdateAPIView, RetrieveAPIView
+from rest_framework.decorators import action
+from rest_framework.generics import CreateAPIView, UpdateAPIView, RetrieveAPIView, GenericAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
@@ -148,7 +149,7 @@ class AddressViewSet(ModelViewSet):
     """
     对地址的增删改查视图接口
     retrieve: 默认实现够用
-    update: 默认实现够用
+    update: 默认实现够用,不需要修改
     """
     permission_classes = [IsAuthenticated]
     serializer_class = AddressSerializer
@@ -172,8 +173,65 @@ class AddressViewSet(ModelViewSet):
         serializer = self.get_serializer(address_list, many=True)
 
         return Response({
-            'user_id': self.request.id,
+            'user_id': self.request.user.id,
             'default_address_id': self.request.user.default_address_id,
             'limit': constants.USER_ADDRESS_COUNTS_LIMIT,
             'addresses': serializer.data
         })
+
+    def destroy(self, request, *args, **kwargs):
+        """
+        重写删除方法,因为默认的方式是接收pk,删除也是物理删除
+        此处应该实现逻辑删除
+        :param request:
+        :param args:
+        :param kwargs:
+        :return:
+        """
+        # 根据主键查到当前要删除的地址
+        address = self.get_object()
+        # 实现逻辑删除
+        address.is_delete = True
+        address.save()
+
+        # 返回响应,不需要信息,只需要返回一个状态码
+        return Response(status=204)
+
+    """
+    下方的 title 和 status 都是进行修改操作,即请求为 put 请求,与原有的冲突
+    为了解决冲突,所有使用 ModelViewSet 的 action 来新增方法
+    """
+
+    # 修改标题===>****/pk/title/------put
+    # 如果没有detail=False=====>*****/title/
+    # addresses/(?P<pk>[^/.]+)/title/$ [name='addresses-title']
+    @action(methods=['PUT'], detail=True)
+    def title(self, request, pk):
+        """
+        修改地址的标题
+        :param request:
+        :param pk:
+        :return:
+        """
+        # 根据主键查询收货地址
+        address = self.get_object()
+        # 接收数据修改标题属性
+        address.title = request.data.get('title')
+        address.save()
+        return Response({'title': address.title})
+
+    # 设置默认收货地址===>^ ^addresses/(?P<pk>[^/.]+)/status/$ [name='addresses-status']
+    @action(methods=['PUT'], detail=True)
+    def status(self, request, pk):
+        """
+        将地址设置为默认地址
+        :param request:
+        :param pk:
+        :return:
+        """
+        # 查找当前登录的用户
+        user = request.user  # 此处之所以能这么用是因为ModelViewSet封装的
+        # 将当前地址设置为默认收货地址
+        user.default_address_id = pk
+        user.save()
+        return Response({'message': 'OK'})

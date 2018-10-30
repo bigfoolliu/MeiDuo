@@ -650,3 +650,145 @@ INFO 2018-10-30 13:17:36,104 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
 INFO 2018-10-30 13:17:36,331 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
 INFO 2018-10-30 13:17:39,813 basehttp 124 "GET /areas/ HTTP/1.1" 200 11883
 INFO 2018-10-30 13:17:50,824 basehttp 124 "GET /areas/320000/ HTTP/1.1" 200 10923
+INFO 2018-10-30 20:11:23,825 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-30 20:11:23,851 log 228 Unauthorized: /user/
+WARNING 2018-10-30 20:11:23,852 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+INFO 2018-10-30 20:11:32,404 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-30 20:11:32,541 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-10-30 20:11:32,619 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+INFO 2018-10-30 20:11:32,654 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-30 20:11:32,715 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 20:11:32,715 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6872
+INFO 2018-10-30 20:11:37,124 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-30 20:11:37,139 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-10-30 20:11:37,397 log 228 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\PythonProjects\MeiDuo\MeiDuo\apps\users\views.py", line 176, in list
+    'user_id': self.request.id,
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'id'
+ERROR 2018-10-30 20:11:37,400 basehttp 124 "GET /addresses/ HTTP/1.1" 500 22155
+INFO 2018-10-30 20:12:28,172 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-30 20:12:28,175 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-10-30 20:12:30,598 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+WARNING 2018-10-30 20:12:30,620 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 20:12:30,621 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6872
+INFO 2018-10-30 20:12:31,920 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-30 20:12:31,938 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-10-30 20:12:47,680 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-10-30 20:12:48,746 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+ERROR 2018-10-30 20:13:25,570 log 228 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\PythonProjects\MeiDuo\MeiDuo\apps\users\serializers.py", line 221, in create
+    if user.addresses.filter(is_delete=False).count > constants.USER_ADDRESS_COUNTS_LIMIT:
+TypeError: '>' not supported between instances of 'method' and 'int'
+ERROR 2018-10-30 20:13:25,573 basehttp 124 "POST /addresses/ HTTP/1.1" 500 22289
+ERROR 2018-10-30 20:13:30,725 log 228 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\PythonProjects\MeiDuo\MeiDuo\apps\users\serializers.py", line 221, in create
+    if user.addresses.filter(is_delete=False).count > constants.USER_ADDRESS_COUNTS_LIMIT:
+TypeError: '>' not supported between instances of 'method' and 'int'
+ERROR 2018-10-30 20:13:30,727 basehttp 124 "POST /addresses/ HTTP/1.1" 500 22289
+INFO 2018-10-30 20:15:16,103 basehttp 124 "POST /addresses/ HTTP/1.1" 201 227
+INFO 2018-10-30 20:15:16,349 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-30 20:15:16,372 basehttp 124 "GET /addresses/ HTTP/1.1" 200 291
+INFO 2018-10-30 20:15:27,537 basehttp 124 "GET /areas/130000/ HTTP/1.1" 200 464
+INFO 2018-10-30 20:15:28,854 basehttp 124 "GET /areas/130200/ HTTP/1.1" 200 503
+INFO 2018-10-30 20:15:46,603 basehttp 124 "POST /addresses/ HTTP/1.1" 201 235
+INFO 2018-10-30 20:15:57,208 basehttp 124 "OPTIONS /addresses/1/status/ HTTP/1.1" 200 0
+INFO 2018-10-30 20:15:57,234 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 200 16
+INFO 2018-10-30 20:16:30,756 basehttp 124 "OPTIONS /addresses/2/status/ HTTP/1.1" 200 0
+INFO 2018-10-30 20:16:30,794 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-10-30 20:18:16,611 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+WARNING 2018-10-30 20:18:16,650 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 20:18:16,650 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6872
+INFO 2018-10-30 20:18:19,024 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-30 20:18:19,044 basehttp 124 "GET /addresses/ HTTP/1.1" 200 524
+INFO 2018-10-30 20:18:28,425 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-30 20:18:28,448 basehttp 124 "GET /addresses/ HTTP/1.1" 200 524
+INFO 2018-10-30 20:18:39,721 basehttp 124 "GET /areas/820000/ HTTP/1.1" 200 54
+INFO 2018-10-30 20:19:25,003 basehttp 124 "GET /areas/410000/ HTTP/1.1" 200 662
+INFO 2018-10-30 20:19:26,082 basehttp 124 "GET /areas/410200/ HTTP/1.1" 200 377
+INFO 2018-10-30 20:19:27,975 basehttp 124 "POST /addresses/ HTTP/1.1" 201 236
+INFO 2018-10-30 20:19:38,829 basehttp 124 "GET /areas/710000/ HTTP/1.1" 200 42
+INFO 2018-10-30 20:20:43,201 basehttp 124 "OPTIONS /addresses/3/title/ HTTP/1.1" 200 0
+INFO 2018-10-30 20:20:43,232 basehttp 124 "PUT /addresses/3/title/ HTTP/1.1" 200 16
+INFO 2018-10-30 20:20:46,156 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-30 20:20:46,173 basehttp 124 "GET /addresses/ HTTP/1.1" 200 761
+INFO 2018-10-30 20:20:57,353 basehttp 124 "OPTIONS /addresses/2/title/ HTTP/1.1" 200 0
+INFO 2018-10-30 20:20:57,380 basehttp 124 "PUT /addresses/2/title/ HTTP/1.1" 200 18
+INFO 2018-10-30 20:20:59,650 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-30 20:20:59,668 basehttp 124 "GET /addresses/ HTTP/1.1" 200 764
+INFO 2018-10-30 20:21:18,796 basehttp 124 "OPTIONS /addresses/3/ HTTP/1.1" 200 0
+INFO 2018-10-30 20:21:18,829 basehttp 124 "DELETE /addresses/3/ HTTP/1.1" 204 0
+INFO 2018-10-30 20:21:38,879 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-30 20:21:38,882 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-30 20:21:38,943 basehttp 124 "GET /addresses/ HTTP/1.1" 200 764

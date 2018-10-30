@@ -218,7 +218,7 @@ class AddressSerializer(serializers.ModelSerializer):
         """
         # 首先判断当前地址数量是否已经达到上限
         user = self.context['request'].user
-        if user.addresses.filter(is_delete=False).count > constants.USER_ADDRESS_COUNTS_LIMIT:
+        if user.addresses.filter(is_delete=False).count() > constants.USER_ADDRESS_COUNTS_LIMIT:
             raise serializers.ValidationError('达到收货地址数量上限')
 
         # 默认未指定user,添加地址时会报错,所以需要指定地址的user
