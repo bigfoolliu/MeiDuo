@@ -611,3 +611,42 @@ AssertionError: 'AddressViewSet' should either include a `queryset` attribute, o
 ERROR 2018-10-30 13:05:54,714 basehttp 124 "GET /addresses/ HTTP/1.1" 500 21951
 INFO 2018-10-30 13:06:11,598 basehttp 124 "GET /areas/420000/ HTTP/1.1" 200 542
 INFO 2018-10-30 13:06:13,210 basehttp 124 "GET /areas/420200/ HTTP/1.1" 200 245
+INFO 2018-10-30 13:17:03,196 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-30 13:17:03,255 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+INFO 2018-10-30 13:17:03,473 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-30 13:17:03,484 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 13:17:03,484 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 5968
+INFO 2018-10-30 13:17:04,599 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-30 13:17:04,612 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-10-30 13:17:04,849 log 228 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\mixins.py", line 40, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "D:\PythonProjects\Envs\django_test1_env\lib\site-packages\rest_framework\generics.py", line 68, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'AddressViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2018-10-30 13:17:04,853 basehttp 124 "GET /addresses/ HTTP/1.1" 500 21950
+INFO 2018-10-30 13:17:07,962 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-10-30 13:17:10,901 basehttp 124 "GET /areas/140000/ HTTP/1.1" 200 404
+INFO 2018-10-30 13:17:11,944 basehttp 124 "GET /areas/140200/ HTTP/1.1" 200 398
+INFO 2018-10-30 13:17:29,409 basehttp 124 "GET / HTTP/1.1" 200 2
+INFO 2018-10-30 13:17:36,104 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
+INFO 2018-10-30 13:17:36,331 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
+INFO 2018-10-30 13:17:39,813 basehttp 124 "GET /areas/ HTTP/1.1" 200 11883
+INFO 2018-10-30 13:17:50,824 basehttp 124 "GET /areas/320000/ HTTP/1.1" 200 10923
