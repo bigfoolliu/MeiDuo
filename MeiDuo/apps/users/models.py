@@ -30,5 +30,5 @@ class User(AbstractUser):
         token = tjws.dumps(data, constants.VERIFY_EMAIL_EXPIRES)
 
         # 返回验证用的url
-        return 'http://site.meiduo.site:8000/success_verify_email.html?token=' + token
+        return 'http://www.meiduo.site:8080/success_verify_email.html?token=' + token
 

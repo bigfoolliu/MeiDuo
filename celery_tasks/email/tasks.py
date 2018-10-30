@@ -32,5 +32,5 @@ def send_verify_email(to_email, verify_url):
                    '<p>点此链接激活您的邮箱:</p>' \
                    '<p><a href="%s">%s</a></p>' % (to_email, verify_url, verify_url)
 
-    # 使用dango自带的email功能发送邮件,此句为耗时代码
+    # 使用django自带的email功能发送邮件,此句为耗时代码
     send_mail(subject, '', settings.EMAIL_FROM, [to_email], html_message=html_message)

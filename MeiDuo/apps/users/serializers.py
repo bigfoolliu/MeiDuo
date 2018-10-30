@@ -13,8 +13,11 @@ from django_redis import get_redis_connection
 from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 
+from users import constants
 from users.models import User
 from celery_tasks.email.tasks import send_verify_email
+
+from MeiDuo.utils import tjws
 
 
 class UserCreateSerializer(serializers.Serializer):
@@ -162,4 +165,30 @@ class EmailSerializer(serializers.ModelSerializer):
         send_verify_email.delay(email, instance.generate_verify_url())
 
         return instance
+
+
+class EmailActiveSerializer(serializers.Serializer):
+    """
+    验证邮箱的序列化器
+    """
+    token = serializers.CharField(max_length=200)
+
+    def validate(self, attrs):
+        """
+        验证邮箱以及用户
+        :param attrs:
+        :return:
+        """
+        token = attrs.get('token')
+        # 将token解密获取用户信息
+        data_dict = tjws.loads(token, constants.VERIFY_EMAIL_EXPIRES)
+
+        # token过期
+        if data_dict is None:
+            raise serializers.ValidationError('激活链接已经过期')
+
+        # 将解密的user_id加入到验证后的数据字典中
+        attrs['user_id'] = data_dict.get('user_id')
+
+        return attrs
 

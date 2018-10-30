@@ -14,4 +14,5 @@ urlpatterns = [
     path('authorizations/', obtain_jwt_token),  # 接收username和password,返回一个JSON Web Token
     path('user/', UserDetailView.as_view()),
     path('emails/', EmailView.as_view()),
+    path('emails/verification/', EmailActiveView.as_view()),
 ]

@@ -362,3 +362,131 @@ WARNING 2018-10-29 21:14:25,490 log 228 Not Found: /browse_histories/
 WARNING 2018-10-29 21:14:25,491 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
 INFO 2018-10-29 21:14:30,915 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
 INFO 2018-10-29 21:14:30,951 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-29 22:00:01,454 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-29 22:00:01,632 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-10-29 22:00:07,611 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-29 22:00:07,673 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+INFO 2018-10-29 22:00:07,741 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-29 22:00:07,756 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:00:07,757 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:00:15,175 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-29 22:00:15,288 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-29 22:03:14,327 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+WARNING 2018-10-29 22:03:14,368 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:03:14,369 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:03:31,524 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-29 22:03:31,575 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:03:31,575 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:03:33,378 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-29 22:03:33,436 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:03:33,436 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:03:38,446 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-29 22:05:55,956 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+WARNING 2018-10-29 22:05:55,983 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:05:55,984 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:08:50,654 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-29 22:08:50,901 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:08:50,902 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:08:55,068 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+WARNING 2018-10-29 22:10:26,697 log 228 Not Found: /emails/verification/
+WARNING 2018-10-29 22:10:26,699 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU0MDgyMjEzNSwiZXhwIjoxNTQwODI5MzM1fQ.eyJ1c2VyX2lkIjoxfQ.uKQ6bZN9-NvzJddxgUHnIkucBBXnxNJrdBLqUwg2gRNgha53lQKKUn82GgPqwtbAGrQTGbNfs1ytfionNQgCUw HTTP/1.1" 404 3627
+INFO 2018-10-29 22:10:26,887 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-29 22:10:26,916 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+INFO 2018-10-29 22:10:26,923 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-29 22:10:26,932 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:10:26,932 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:10:31,315 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+WARNING 2018-10-29 22:10:31,343 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:10:31,344 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:10:31,636 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+WARNING 2018-10-29 22:10:31,667 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:10:31,667 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-29 22:10:35,333 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-29 22:10:35,389 log 228 Unauthorized: /user/
+WARNING 2018-10-29 22:10:35,389 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+WARNING 2018-10-29 22:10:35,568 log 228 Unauthorized: /user/
+WARNING 2018-10-29 22:10:35,568 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+INFO 2018-10-29 22:10:44,050 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-29 22:10:44,186 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-10-29 22:10:44,271 basehttp 124 "GET /user/ HTTP/1.1" 200 107
+INFO 2018-10-29 22:10:44,310 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-29 22:10:44,337 log 228 Not Found: /browse_histories/
+WARNING 2018-10-29 22:10:44,338 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3439
+INFO 2018-10-30 08:38:31,086 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-30 08:38:31,291 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-30 08:38:34,476 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-30 08:38:34,518 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+INFO 2018-10-30 08:38:34,607 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-30 08:38:34,629 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 08:38:34,629 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 08:39:11,741 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-30 08:39:11,831 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-30 08:40:43,658 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU0MDg1OTk1MSwiZXhwIjoxNTQwODY3MTUxfQ.eyJ1c2VyX2lkIjoxfQ.wTOl1SbaHnSqcg1fvQn4sKOyil7JcOrfQF48sRjIfqtT9pqXSY5lHE8S4_-PHo7T1f9mpCcZ6BmJQgbrPnikGw HTTP/1.1" 200 16
+INFO 2018-10-30 08:40:43,769 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+WARNING 2018-10-30 08:40:43,790 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 08:40:43,791 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 08:40:48,736 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-30 08:40:48,758 log 228 Unauthorized: /user/
+WARNING 2018-10-30 08:40:48,759 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+INFO 2018-10-30 08:40:57,868 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-30 08:40:57,984 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-10-30 08:40:58,056 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+INFO 2018-10-30 08:40:58,074 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-30 08:40:58,088 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 08:40:58,088 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 08:41:05,448 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+WARNING 2018-10-30 08:41:05,476 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 08:41:05,476 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 08:51:26,750 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-30 08:51:26,951 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-30 08:51:28,879 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-30 08:51:28,933 basehttp 124 "GET /user/ HTTP/1.1" 200 83
+INFO 2018-10-30 08:51:28,983 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-30 08:51:29,003 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 08:51:29,003 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 08:51:33,444 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-30 08:51:33,520 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-30 08:52:01,782 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+WARNING 2018-10-30 08:52:01,821 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 08:52:01,821 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 08:52:25,975 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-30 08:52:26,029 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 08:52:26,029 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 08:52:43,823 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-30 08:52:43,850 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 08:52:43,851 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 08:52:47,419 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-30 09:03:07,525 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-30 09:03:07,687 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-30 09:03:08,926 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-30 09:03:08,966 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+INFO 2018-10-30 09:03:09,019 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-30 09:03:09,032 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 09:03:09,032 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 09:03:10,895 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-30 09:03:10,932 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 09:03:10,932 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 09:03:14,889 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-30 09:03:14,980 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-30 09:19:22,623 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-30 09:19:22,779 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-30 09:19:24,477 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-30 09:19:24,516 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+INFO 2018-10-30 09:19:24,568 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-30 09:19:24,580 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 09:19:24,581 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 09:19:26,052 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-30 09:19:26,088 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 09:19:26,089 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 09:19:29,903 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-30 09:19:29,984 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-30 09:21:32,594 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-30 09:21:32,791 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 09:21:32,791 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606
+INFO 2018-10-30 09:21:38,294 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-10-30 09:22:23,562 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU0MDg2MjQ5OCwiZXhwIjoxNTQwODY5Njk4fQ.eyJ1c2VyX2lkIjoxfQ.H0wogtf9PsuAGljhw-wLgnef6iFutCvrAgW5OYIFND6Cxw420btRRueEBOeW17pleZ3R_khNZICmha9xJe6-_g HTTP/1.1" 200 16
+INFO 2018-10-30 09:22:32,212 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-30 09:22:32,233 basehttp 124 "GET /user/ HTTP/1.1" 200 106
+INFO 2018-10-30 09:22:32,322 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-30 09:22:32,337 log 228 Not Found: /browse_histories/
+WARNING 2018-10-30 09:22:32,337 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3606

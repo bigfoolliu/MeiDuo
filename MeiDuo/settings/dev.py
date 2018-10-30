@@ -258,8 +258,13 @@ QQ_STATE = '/'  # 登录成功成功之后返回到网站的哪个页面
 
 # 配置邮箱服务器
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # django邮箱后端,不可更改
-EMAIL_HOST = 'smtp.163.com'  # 邮件服务器域名,可更改
-EMAIL_PORT = 25  # 邮件服务器端口
-EMAIL_HOST_USER = 'itcast88@163.com'  # 发送邮件的邮箱
-EMAIL_HOST_PASSWORD = 'itheima808'  # 在邮箱中设置的客户端授权密码
-EMAIL_FROM = '美多商城<itcast88@163.com>'  # 收件人看到的发件人
+# EMAIL_HOST = 'smtp.163.com'  # 邮件服务器发送邮件域名,可更改
+EMAIL_HOST = 'smtp.qq.com'  # 邮件服务器发送邮件域名,可更改
+# EMAIL_PORT = 25  # 邮件服务器发送邮件端口
+EMAIL_PORT = 25  # 邮件服务器发送邮件端口
+# EMAIL_HOST_USER = 'itcast88@163.com'  # 发送邮件的邮箱
+EMAIL_HOST_USER = '2713281245@qq.com'  # 发送邮件的邮箱
+# EMAIL_HOST_PASSWORD = 'itheima808'  # 在邮箱中设置的客户端授权密码
+EMAIL_HOST_PASSWORD = 'pglpvhvpqvaodegi'  # 在邮箱中设置的客户端授权密码
+# EMAIL_FROM = '美多商城<itcast88@163.com>'  # 收件人看到的发件人
+EMAIL_FROM = '美多商城<2713281245@qq.com>'  # 收件人看到的发件人

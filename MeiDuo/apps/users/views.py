@@ -6,7 +6,7 @@ from rest_framework.response import Response
 
 from rest_framework.views import APIView
 from users.models import User
-from users.serializers import UserCreateSerializer, EmailSerializer, UserDetailSerializer
+from users.serializers import UserCreateSerializer, EmailSerializer, UserDetailSerializer, EmailActiveSerializer
 
 from rest_framework_jwt.utils import jwt_response_payload_handler
 from django.contrib.auth.backends import ModelBackend
@@ -114,3 +114,28 @@ class EmailView(UpdateAPIView):
         :return:
         """
         return self.request.user
+
+
+class EmailActiveView(APIView):
+    """
+    邮箱验证视图接口
+    """
+
+    def get(self, request):
+        """
+        GET请求
+        :return:
+        """
+        serializer = EmailActiveSerializer(data=request.query_params)
+        # 验证数据
+        if not serializer.is_valid():
+            return Response(serializer.errors)
+
+        # 查询当前用户
+        user = User.objects.get(pk=serializer.validated_data.get('user_id'))
+        # 更改其邮箱验证的状态
+        user.email_active = True
+        user.save()
+
+        return Response({'message': 'OK'})
+
