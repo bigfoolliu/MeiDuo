@@ -7,8 +7,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
+from users import constants
 from users.models import User
-from users.serializers import UserCreateSerializer, EmailSerializer, UserDetailSerializer, EmailActiveSerializer
+from users.serializers import UserCreateSerializer, EmailSerializer, UserDetailSerializer, EmailActiveSerializer, \
+    AddressSerializer
 
 from rest_framework_jwt.utils import jwt_response_payload_handler
 from django.contrib.auth.backends import ModelBackend
@@ -145,7 +147,33 @@ class EmailActiveView(APIView):
 class AddressViewSet(ModelViewSet):
     """
     对地址的增删改查视图接口
+    retrieve: 默认实现够用
+    update: 默认实现够用
     """
-    pass
+    permission_classes = [IsAuthenticated]
+    serializer_class = AddressSerializer
 
+    def get_queryset(self):
+        """
+        重新指定查询集,查找的是逻辑上没有删除的
+        :return:
+        """
+        return self.request.user.addresses.filter(is_delete=False)
 
+    def list(self, request, *args, **kwargs):
+        """
+        查询数据
+        :param request:
+        :param args:
+        :param kwargs:
+        :return:
+        """
+        address_list = self.get_queryset()
+        serializer = self.get_serializer(address_list, many=True)
+
+        return Response({
+            'user_id': self.request.id,
+            'default_address_id': self.request.user.default_address_id,
+            'limit': constants.USER_ADDRESS_COUNTS_LIMIT,
+            'addresses': serializer.data
+        })

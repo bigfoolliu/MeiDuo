@@ -14,7 +14,7 @@ from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 
 from users import constants
-from users.models import User
+from users.models import User, Address
 from celery_tasks.email.tasks import send_verify_email
 
 from MeiDuo.utils import tjws
@@ -191,4 +191,39 @@ class EmailActiveSerializer(serializers.Serializer):
         attrs['user_id'] = data_dict.get('user_id')
 
         return attrs
+
+
+class AddressSerializer(serializers.ModelSerializer):
+    """
+    用户地址序列化器
+    """
+    # 关系属性使用id进行接收
+    province_id = serializers.IntegerField()
+    city_id = serializers.IntegerField()
+    district_id = serializers.IntegerField()
+    # 关系属性改为非必须项
+    province = serializers.StringRelatedField(read_only=True)
+    city = serializers.StringRelatedField(read_only=True)
+    district = serializers.StringRelatedField(read_only=True)
+
+    class Meta:
+        model = Address
+        exclude = ['is_delete', 'create_time', 'update_time', 'user']
+
+    def create(self, validated_data):
+        """
+        创建一条新的地址
+        :param validated_data:
+        :return:
+        """
+        # 首先判断当前地址数量是否已经达到上限
+        user = self.context['request'].user
+        if user.addresses.filter(is_delete=False).count > constants.USER_ADDRESS_COUNTS_LIMIT:
+            raise serializers.ValidationError('达到收货地址数量上限')
+
+        # 默认未指定user,添加地址时会报错,所以需要指定地址的user
+        validated_data['user'] = user
+
+        address = super().create(validated_data)  # TODO: 不够理解
+        return address
 
