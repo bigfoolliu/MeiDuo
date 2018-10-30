@@ -3,6 +3,8 @@
 # !@Author: Liu Rui
 # !@github: bigfoolliu
 from django.urls import path, re_path
+from rest_framework.routers import DefaultRouter
+
 from .views import *
 from rest_framework_jwt.views import obtain_jwt_token
 
@@ -16,3 +18,8 @@ urlpatterns = [
     path('emails/', EmailView.as_view()),
     path('emails/verification/', EmailActiveView.as_view()),
 ]
+
+# 为地址的视图集创建url地址
+router = DefaultRouter()
+router.register('addresses', AddressViewSet, base_name='addresses')
+urlpatterns += router.urls

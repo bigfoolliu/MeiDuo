@@ -5,6 +5,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
+
 from users.models import User
 from users.serializers import UserCreateSerializer, EmailSerializer, UserDetailSerializer, EmailActiveSerializer
 
@@ -138,4 +140,12 @@ class EmailActiveView(APIView):
         user.save()
 
         return Response({'message': 'OK'})
+
+
+class AddressViewSet(ModelViewSet):
+    """
+    对地址的增删改查视图接口
+    """
+    pass
+
 

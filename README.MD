@@ -332,7 +332,7 @@ send_mail(subject, message, from_email, recipient_list,html_message=None)
 + recipient_list 收件人列表
 + html_message 多媒体邮件正文，可以是html字符串
 
-### 后端接口
+### 发送邮件后端接口
 
 + 访问方式:  PUT /emails/
 + 请求参数:  JSON或表单
@@ -348,4 +348,65 @@ email   str     是        Email邮箱
 参数名  类型    是否必须     说明
 id      int     是          用户id
 email   str     是          Email邮箱
+```
+
+### 验证邮件后端接口
+
++ 访问方式:  GET /emails/verification/?token=xxx
++ 请求参数:  查询字符串
+
+```text
+参数名  类型    是否必须     说明
+token   str     是        用于验证邮箱的token
+```
+
++ 返回数据: JSON
+
+```text
+参数名      类型    是否必须     说明
+message     str     是          验证处理结果
+```
+
+## 收获地址
+
+主要的业务逻辑有：
+
+1. 省市区地址的数据库建立与查询
+2. 用户地址的增删改查处理
+3. 设置默认地址
+4. 设置地址标题
+
+省市区三级联动
+在Django REST framework中使用缓存
+
+### 请求省份后端接口
+
++ 访问方式:  GET areas/
++ 请求参数:  无
+
++ 返回数据: JSON
+
+```text
+参数名  类型    是否必须     说明
+id      int     是          省份id
+name    str     是          省份名称
+```
+
+### 请求城市或区县后端接口
+
++ 访问方式:  GET areas/(?P<pk>\d+)/
++ 请求参数:  路径参数
+
+```text
+参数名  类型    是否必须     说明
+pk      int     是          上级区划id（省份id用于获取城市数据，或城市id用于获取区县数据）
+```
+
++ 返回数据: JSON
+
+```text
+参数名  类型    是否必须     说明
+id      int     是          上级区划id（省份id或城市id）
+name    str     是          上级区划的名称
+subs    list[]  是          下属所有区划信息
 ```

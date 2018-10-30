@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
     'verifications.apps.VerificationsConfig',  # 注册验证应用
     'oauth.apps.OauthConfig',  # 注册第三方登录应用
+    'areas.apps.AreasConfig',  # 注册地区应用
 ]
 
 MIDDLEWARE = [
