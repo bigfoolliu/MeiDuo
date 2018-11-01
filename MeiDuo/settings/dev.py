@@ -279,3 +279,11 @@ EMAIL_HOST_USER = '2713281245@qq.com'  # 发送邮件的邮箱
 EMAIL_HOST_PASSWORD = 'pglpvhvpqvaodegi'  # 在邮箱中设置的客户端授权密码
 # EMAIL_FROM = '美多商城<itcast88@163.com>'  # 收件人看到的发件人
 EMAIL_FROM = '美多商城<2713281245@qq.com>'  # 收件人看到的发件人
+
+
+# fastdfs配置
+FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fast_dfs/client.conf')
+# 访问fastdfs的地址配置
+FDFS_URL = 'http://image.meiduo.site:8888/'
+# 更改django文件存储,指定为自己写的存储类
+DEFAULT_FILE_STORAGE = 'utils.fast_dfs.storage.FdfsStorage'
