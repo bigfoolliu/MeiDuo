@@ -434,3 +434,6 @@ send_mail(subject, message, from_email, recipient_list,html_message=None)
 
 ## 商品
 
+我们将通过Django上传的图片保存到了FastDFS中，而保存在FastDFS中的文件名没有后缀名，
+ckeditor在处理上传后的文件名按照有后缀名来处理，所以会出现bug错误.
+修改django-ckeditor库的ckeditor_uploader/views.py中的代码.
