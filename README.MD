@@ -13,7 +13,7 @@
 >> celery_tasks
 >>
 >> MeiDuo
->>> apps------>存放Dajango应用
+>>> apps------>存放Django应用
 >>>
 >>> logs------>存放日志文件
 >>>
@@ -437,3 +437,48 @@ send_mail(subject, message, from_email, recipient_list,html_message=None)
 我们将通过Django上传的图片保存到了FastDFS中，而保存在FastDFS中的文件名没有后缀名，
 ckeditor在处理上传后的文件名按照有后缀名来处理，所以会出现bug错误.
 修改django-ckeditor库的ckeditor_uploader/views.py中的代码.
+
+### FastDFS分布式文件系统
+
+使用 FastDFS 很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务.
+
+FastDFS 架构包括 Tracker server 和 Storage server.
+
++ Tracker server 作用是负载均衡和调度, 通过 Tracker server 在文件上传时可以根据一些 策略找到 Storage server 提供文件上传服务。
+可以将 tracker 称为追踪服务器或调度服务器.
++ Storage server 作用是文件存储，客户端上传的文件最终存储在 Storage 服务器上,
+Storageserver 没有实现自己的文件系统而是利用操作系统 的文件系统来管理文件。可以将 storage 称为存储服务器.
+
+### Docker
+
+容器技术可以让多个独立的用户空间运行 在同一台宿主机上.可以为各种测试提供很好的沙盒环境.好处有：
+
+1. 加速本地开发和构建流程，使其更加高效、更加轻量化
+2. 能够让独立的服务或应用程序在不同的环境中，得到相同的运行结果.
+3. 用 Docker 创建隔离的环境来进行测试
+4. Docker 可以让开发者先在本机上构建一个复杂的程序或架构来进行测试，而不是 一开始就在生产环境部署、测试.
+
+#### Docker镜像(image)
+
+用户基于镜像来运行自己的容器.可以将镜像当作容器的“源代码”.
+
+#### Docker容器(container)
+
+把自己的应用程序或者服务打包放进容器.容器基于镜像启动，一旦容器启动完成后，我们就可以登录到容器中安装自己需要的软件或者服务.
+
+#### 常用命令
+
+1. 首次开启tracker服务 
+docker run -dti --network=host --name tracker -v /var/fdfs/tracker:/var/fdfs delron/fastdfs tracker
+2. 查看运行的容器
+docker container ls
+3. 停止tracker服务
+docker container stop tracker
+4. 再次开启tracker服务
+docker container start tracker
+5. 首次开启storage服务
+docker run -dti --network=host --name storage -e TRACKER_SERVER=本机ip:22122 -v /var/fdfs/storage:/var/fdfs delron/fastdfs storage
+6. 再次开启和关闭storage服务的命令和tracker相同
+
+使用时注意每次本地的ip发生更改，则重新作为首次开启storage服务，以及修改client.conf文件中的ip！！！
+数据保存目录: /var/fdfs/storage/data

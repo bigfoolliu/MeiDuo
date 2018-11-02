@@ -792,3 +792,134 @@ INFO 2018-10-30 20:21:18,829 basehttp 124 "DELETE /addresses/3/ HTTP/1.1" 204 0
 INFO 2018-10-30 20:21:38,879 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
 INFO 2018-10-30 20:21:38,882 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
 INFO 2018-10-30 20:21:38,943 basehttp 124 "GET /addresses/ HTTP/1.1" 200 764
+INFO 2018-11-02 12:58:07,308 basehttp 124 "GET / HTTP/1.1" 200 2
+WARNING 2018-11-02 12:58:07,488 log 228 Not Found: /favicon.ico
+WARNING 2018-11-02 12:58:07,492 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6957
+INFO 2018-11-02 12:58:13,418 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
+INFO 2018-11-02 12:58:13,504 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
+INFO 2018-11-02 12:58:13,526 basehttp 124 "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+INFO 2018-11-02 12:58:13,527 basehttp 124 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17976
+INFO 2018-11-02 12:58:13,546 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 200 16225
+INFO 2018-11-02 12:58:13,704 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2018-11-02 12:58:13,745 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+INFO 2018-11-02 12:58:13,773 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+INFO 2018-11-02 12:58:15,245 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1954
+INFO 2018-11-02 12:58:15,299 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+INFO 2018-11-02 12:58:26,773 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1952
+INFO 2018-11-02 16:15:01,890 basehttp 124 "GET / HTTP/1.1" 200 2
+WARNING 2018-11-02 16:15:02,054 log 228 Not Found: /favicon.ico
+WARNING 2018-11-02 16:15:02,057 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6957
+INFO 2018-11-02 16:15:06,910 basehttp 124 "GET /admin HTTP/1.1" 301 0
+INFO 2018-11-02 16:15:06,948 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
+INFO 2018-11-02 16:15:07,039 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
+INFO 2018-11-02 16:15:07,078 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-02 16:15:07,094 basehttp 124 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2018-11-02 16:15:07,098 basehttp 124 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2018-11-02 16:15:07,182 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-02 16:15:07,277 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-02 16:15:07,290 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-02 16:15:11,222 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1952
+INFO 2018-11-02 16:15:11,264 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-02 16:15:19,326 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2018-11-02 16:15:19,384 basehttp 124 "GET /admin/ HTTP/1.1" 200 8110
+INFO 2018-11-02 16:15:19,417 basehttp 124 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO 2018-11-02 16:15:19,441 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2018-11-02 16:15:19,447 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2018-11-02 16:15:25,937 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15700
+INFO 2018-11-02 16:15:25,976 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+INFO 2018-11-02 16:15:26,016 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+INFO 2018-11-02 16:15:26,024 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+INFO 2018-11-02 16:15:26,033 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 200 7135
+INFO 2018-11-02 16:15:26,065 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+INFO 2018-11-02 16:15:26,040 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 200 6538
+INFO 2018-11-02 16:15:26,072 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 200 8972
+INFO 2018-11-02 16:15:26,093 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+INFO 2018-11-02 16:15:26,099 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 16:15:26,102 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+INFO 2018-11-02 16:15:26,281 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2018-11-02 16:15:28,957 basehttp 124 "GET /admin/ HTTP/1.1" 200 8110
+INFO 2018-11-02 16:15:30,845 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8705
+INFO 2018-11-02 16:15:30,890 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 16:15:32,962 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34320
+INFO 2018-11-02 16:15:32,976 basehttp 124 "GET /static/admin/css/forms.css HTTP/1.1" 200 8505
+INFO 2018-11-02 16:15:33,012 basehttp 124 "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+INFO 2018-11-02 16:15:33,018 basehttp 124 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2018-11-02 16:15:33,026 basehttp 124 "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+INFO 2018-11-02 16:15:33,028 basehttp 124 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+INFO 2018-11-02 16:15:33,033 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 16:15:36,103 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8705
+INFO 2018-11-02 16:15:37,636 basehttp 124 "GET /admin/ HTTP/1.1" 200 8110
+INFO 2018-11-02 16:15:39,302 basehttp 124 "GET /admin/goods/goods/ HTTP/1.1" 200 4819
+INFO 2018-11-02 16:15:39,358 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 16:15:40,846 basehttp 124 "GET /admin/goods/goods/3/change/ HTTP/1.1" 200 87429
+INFO 2018-11-02 16:15:40,924 basehttp 124 "GET /static/ckeditor/ckeditor-init.js HTTP/1.1" 200 2039
+INFO 2018-11-02 16:15:40,927 basehttp 124 "GET /static/ckeditor/ckeditor/ckeditor.js HTTP/1.1" 200 690627
+INFO 2018-11-02 16:15:40,957 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 16:15:41,391 basehttp 124 "GET /static/ckeditor/ckeditor/config.js?t=I3I8 HTTP/1.1" 200 338
+INFO 2018-11-02 16:15:41,417 basehttp 124 "GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=I3I8 HTTP/1.1" 200 46921
+INFO 2018-11-02 16:15:41,419 basehttp 124 "GET /static/ckeditor/ckeditor/lang/zh-cn.js?t=I3I8 HTTP/1.1" 200 18818
+INFO 2018-11-02 16:15:41,476 basehttp 124 "GET /static/ckeditor/ckeditor/styles.js?t=I3I8 HTTP/1.1" 200 5583
+INFO 2018-11-02 16:15:41,503 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css HTTP/1.1" 200 419
+INFO 2018-11-02 16:15:41,504 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css HTTP/1.1" 200 381
+INFO 2018-11-02 16:15:41,508 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css HTTP/1.1" 200 1306
+INFO 2018-11-02 16:15:41,510 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css HTTP/1.1" 200 1082
+INFO 2018-11-02 16:15:41,523 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css HTTP/1.1" 200 1513
+INFO 2018-11-02 16:15:41,609 basehttp 124 "GET /static/ckeditor/ckeditor/skins/moono-lisa/icons.png?t=95e5d83 HTTP/1.1" 200 12421
+INFO 2018-11-02 16:15:41,720 basehttp 124 "GET /static/ckeditor/ckeditor/contents.css?t=I3I8 HTTP/1.1" 200 2954
+INFO 2018-11-02 16:16:13,198 basehttp 124 "POST /admin/goods/goods/3/change/ HTTP/1.1" 302 0
+INFO 2018-11-02 16:16:13,268 basehttp 124 "GET /admin/goods/goods/ HTTP/1.1" 200 4999
+INFO 2018-11-02 16:16:13,391 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 16:16:13,490 basehttp 124 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2018-11-02 19:14:17,246 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-11-02 19:14:46,314 views 71 QQUser matching query does not exist.
+INFO 2018-11-02 19:14:46,321 basehttp 124 "GET /oauth/qq/user/?code=E4948524D9A301019E2F4297D172A2A7 HTTP/1.1" 200 233
+INFO 2018-11-02 19:15:07,657 basehttp 124 "GET /sms_code/13100000000/ HTTP/1.1" 200 18
+INFO 2018-11-02 19:15:30,265 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-11-02 19:15:30,274 serializes 67 User matching query does not exist.
+INFO 2018-11-02 19:15:30,421 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 218
+INFO 2018-11-02 19:15:36,536 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-02 19:15:36,638 basehttp 124 "GET /user/ HTTP/1.1" 200 88
+INFO 2018-11-02 19:15:36,673 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-02 19:15:36,688 log 228 Not Found: /browse_histories/
+WARNING 2018-11-02 19:15:36,693 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6981
+INFO 2018-11-02 19:15:51,962 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-11-02 19:15:52,007 basehttp 124 "PUT /emails/ HTTP/1.1" 200 35
+INFO 2018-11-02 19:16:27,938 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU0MTE1NzM1MSwiZXhwIjoxNTQxMTY0NTUxfQ.eyJ1c2VyX2lkIjoyfQ.iI8ShBp2fY99Rj8PCvSrr4IF1W66HsfgqKXEWkZ2SEQsB-f3qaJ7F47vfPOqcPJ41aA2fXYKJNz5XOE5coVprg HTTP/1.1" 200 16
+INFO 2018-11-02 19:16:34,372 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-02 19:16:34,484 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2018-11-02 19:16:34,511 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-02 19:16:34,525 log 228 Not Found: /browse_histories/
+WARNING 2018-11-02 19:16:34,532 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6981
+INFO 2018-11-02 19:16:37,714 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-02 19:16:37,765 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-02 19:16:37,810 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-11-02 19:16:40,251 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-02 19:16:40,286 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-11-02 19:16:47,264 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-11-02 19:16:48,215 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+INFO 2018-11-02 19:17:11,217 basehttp 124 "POST /addresses/ HTTP/1.1" 201 243
+INFO 2018-11-02 19:17:20,299 basehttp 124 "GET /areas/150000/ HTTP/1.1" 200 485
+INFO 2018-11-02 19:17:21,699 basehttp 124 "GET /areas/150100/ HTTP/1.1" 200 362
+INFO 2018-11-02 19:17:46,219 basehttp 124 "POST /addresses/ HTTP/1.1" 201 260
+INFO 2018-11-02 19:17:49,496 basehttp 124 "OPTIONS /addresses/2/status/ HTTP/1.1" 200 0
+INFO 2018-11-02 19:17:49,518 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-11-02 19:17:53,868 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+WARNING 2018-11-02 19:17:53,892 log 228 Not Found: /browse_histories/
+WARNING 2018-11-02 19:17:53,896 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6981
+INFO 2018-11-02 19:17:58,489 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+WARNING 2018-11-02 19:17:58,553 log 228 Not Found: /browse_histories/
+WARNING 2018-11-02 19:17:58,556 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6981
+INFO 2018-11-02 19:18:00,164 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-02 19:18:00,215 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-02 19:18:03,224 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-02 19:18:03,303 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-02 19:18:03,845 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+WARNING 2018-11-02 19:18:03,864 log 228 Not Found: /browse_histories/
+WARNING 2018-11-02 19:18:03,869 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6981
+WARNING 2018-11-02 19:18:15,920 log 228 Not Found: /categories/115/skus/
+WARNING 2018-11-02 19:18:15,934 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 404 7039
+WARNING 2018-11-02 19:18:15,935 log 228 Not Found: /categories/115/
+INFO 2018-11-02 19:18:15,937 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-02 19:18:15,941 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 6975
+WARNING 2018-11-02 19:18:15,969 log 228 Not Found: /cart/
+WARNING 2018-11-02 19:18:15,972 basehttp 124 "GET /cart/ HTTP/1.1" 404 6945

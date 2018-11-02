@@ -14,17 +14,19 @@ if __name__ == '__main__':
     # 指定一个Fdfs客户端对象,并指定配置文件
     client = Fdfs_client('client.conf')
     # 上传文件(会返回文件名)
-    ret = client.upload_by_file('1.PNG')
+    ret = client.upload_by_file('1.jpg')
     print(ret)
 
 """
 正确结果:
 {
-    'Uploaded size': '12.00KB',
-    'Status': 'Upload successed.',
-    'Storage IP': '192.168.247.128',
     'Group name': 'group1',
-    'Local file name': '/home/python/Desktop/pic/avatar/1.jpg',
-    'Remote file_id': 'group1/M00/00/02/wKj3gFvaou-ACZ2EAAAwL_xHUtE202.jpg'
+    'Remote file_id': 'group1/M00/00/00/wKhAg1vcRYuAU2wDACkhPO9qQ1o192.jpg',
+    'Status': 'Upload successed.',
+    'Local file name': '1.jpg',
+    'Uploaded size': '2.00MB',
+    'Storage IP': '192.168.64.131'
 }
+
+数据保存目录: /var/fdfs/storage/data
 """
