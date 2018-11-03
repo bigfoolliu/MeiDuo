@@ -497,3 +497,24 @@ docker run -dti --network=host --name storage -e TRACKER_SERVER=本机ip:22122 -
 1. 添加定时任务到系统中 python manage.py crontab add
 2. 显示已经激活的定时任务 python manage.py crontab show
 3. 移除定时任务 python manage.py crontab remove
+
+### 商品搜索
+
+使用haystack　+ Elasticsearch实现模糊搜索.
+
+haystack:
++ 作为一个驱动包
++ Haystack为Django提供了模块化的搜索
+
+Elasticsearch:
++ 它可以快速地储存、搜索和分析海量数据
++ Elasticsearch 不支持对中文进行分词建立索引，需要配合扩展elasticsearch-analysis-ik来实现中文分词处理
+
+
+使用Docker安装Elasticsearch及其扩展
++ docker image pull delron/elasticsearch-ik:2.4.6-1.0
++ 修改elasticsearch的配置文件 elasticsearc-2.4.6/config/elasticsearch.yml第54行，更改ip地址为本机ip地址
++ docker run -dti --network=host --name=elasticsearch -v /home/python/elasticsearch-2.4.6/config:/usr/share/elasticsearch/config delron/elasticsearch-ik:2.4.6-1.0
+
+命令：
+1. 手动生成初始索引　python manage.py rebuild_index

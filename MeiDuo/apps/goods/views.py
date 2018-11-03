@@ -1,11 +1,12 @@
 from django.shortcuts import render
 
 # Create your views here.
+from drf_haystack.viewsets import HaystackViewSet
 from rest_framework.filters import OrderingFilter
 from rest_framework.generics import ListAPIView
 
 from goods.models import SKU
-from goods.serializers import SKUSerializer
+from goods.serializers import SKUSerializer, SKUIndexSerializer
 from pagination import SKUListPagination
 
 
@@ -28,4 +29,13 @@ class SKUListView(ListAPIView):
     # 排序功能
     filter_backends = [OrderingFilter]  # 指定排序过滤器
     ordering_fields = ['create_time', 'price', 'sales']  # 指定排序的字段
+
+
+class SKUSearchViewsSet(HaystackViewSet):
+    """
+    sku搜索的视图集
+    """
+    index_models = [SKU]  # 搜索模型类
+    serializer_class = SKUIndexSerializer  # 指定序列化器
+    pagination_class = SKUListPagination  # 分页
 
