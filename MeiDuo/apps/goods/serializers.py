@@ -14,4 +14,4 @@ class SKUSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SKU
-        fields = ['id', 'name', 'price', 'default_iamge_url', 'comment']
+        fields = ['id', 'name', 'price', 'default_image_url', 'comment']
