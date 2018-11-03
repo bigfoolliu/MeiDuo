@@ -923,3 +923,236 @@ INFO 2018-11-02 19:18:15,937 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
 WARNING 2018-11-02 19:18:15,941 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 6975
 WARNING 2018-11-02 19:18:15,969 log 228 Not Found: /cart/
 WARNING 2018-11-02 19:18:15,972 basehttp 124 "GET /cart/ HTTP/1.1" 404 6945
+INFO 2018-11-02 21:25:49,633 basehttp 124 "GET /admin HTTP/1.1" 301 0
+INFO 2018-11-02 21:25:49,702 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
+INFO 2018-11-02 21:25:49,827 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
+INFO 2018-11-02 21:25:49,872 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 200 16225
+INFO 2018-11-02 21:25:49,881 basehttp 124 "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+INFO 2018-11-02 21:25:49,899 basehttp 124 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17976
+INFO 2018-11-02 21:25:50,024 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2018-11-02 21:25:50,093 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+INFO 2018-11-02 21:25:50,107 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+WARNING 2018-11-02 21:25:50,275 log 228 Not Found: /favicon.ico
+WARNING 2018-11-02 21:25:50,276 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6963
+INFO 2018-11-02 21:26:03,232 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1953
+INFO 2018-11-02 21:26:03,264 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+INFO 2018-11-02 21:26:07,608 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2018-11-02 21:26:07,661 basehttp 124 "GET /admin/ HTTP/1.1" 200 8446
+INFO 2018-11-02 21:26:07,715 basehttp 124 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO 2018-11-02 21:26:07,765 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2018-11-02 21:26:07,765 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2018-11-02 21:26:14,417 basehttp 124 "GET /admin/goods/goods/ HTTP/1.1" 200 4819
+INFO 2018-11-02 21:26:14,458 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+INFO 2018-11-02 21:26:14,509 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+INFO 2018-11-02 21:26:14,519 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 200 7135
+INFO 2018-11-02 21:26:14,539 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+INFO 2018-11-02 21:26:14,558 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+INFO 2018-11-02 21:26:14,591 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 200 6538
+INFO 2018-11-02 21:26:14,592 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+INFO 2018-11-02 21:26:14,603 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+INFO 2018-11-02 21:26:14,611 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 21:26:14,617 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 200 8972
+INFO 2018-11-02 21:26:15,051 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2018-11-02 21:26:16,944 basehttp 124 "GET /admin/goods/goods/3/change/ HTTP/1.1" 200 87544
+INFO 2018-11-02 21:26:17,022 basehttp 124 "GET /static/admin/css/forms.css HTTP/1.1" 200 8505
+INFO 2018-11-02 21:26:17,075 basehttp 124 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2018-11-02 21:26:17,101 basehttp 124 "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+INFO 2018-11-02 21:26:17,126 basehttp 124 "GET /static/ckeditor/ckeditor/ckeditor.js HTTP/1.1" 200 690627
+INFO 2018-11-02 21:26:17,127 basehttp 124 "GET /static/ckeditor/ckeditor-init.js HTTP/1.1" 200 2039
+INFO 2018-11-02 21:26:17,130 basehttp 124 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+INFO 2018-11-02 21:26:17,132 basehttp 124 "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+INFO 2018-11-02 21:26:17,154 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 21:26:18,073 basehttp 124 "GET /static/ckeditor/ckeditor/config.js?t=I3I8 HTTP/1.1" 200 338
+INFO 2018-11-02 21:26:18,094 basehttp 124 "GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=I3I8 HTTP/1.1" 200 46921
+INFO 2018-11-02 21:26:18,099 basehttp 124 "GET /static/ckeditor/ckeditor/lang/zh-cn.js?t=I3I8 HTTP/1.1" 200 18818
+INFO 2018-11-02 21:26:18,143 basehttp 124 "GET /static/ckeditor/ckeditor/styles.js?t=I3I8 HTTP/1.1" 200 5583
+INFO 2018-11-02 21:26:18,169 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css HTTP/1.1" 200 381
+INFO 2018-11-02 21:26:18,171 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css HTTP/1.1" 200 419
+INFO 2018-11-02 21:26:18,183 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css HTTP/1.1" 200 1306
+INFO 2018-11-02 21:26:18,185 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css HTTP/1.1" 200 1082
+INFO 2018-11-02 21:26:18,198 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css HTTP/1.1" 200 1513
+INFO 2018-11-02 21:26:18,263 basehttp 124 "GET /static/ckeditor/ckeditor/skins/moono-lisa/icons.png?t=95e5d83 HTTP/1.1" 200 12421
+INFO 2018-11-02 21:26:18,451 basehttp 124 "GET /static/ckeditor/ckeditor/contents.css?t=I3I8 HTTP/1.1" 200 2954
+INFO 2018-11-02 21:26:21,870 basehttp 124 "GET /admin/goods/goods/ HTTP/1.1" 200 4819
+INFO 2018-11-02 21:26:23,814 basehttp 124 "GET /admin/goods/goods/2/change/ HTTP/1.1" 200 87970
+INFO 2018-11-02 21:26:23,868 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 21:28:10,304 basehttp 124 "GET /admin HTTP/1.1" 301 0
+INFO 2018-11-02 21:28:10,523 basehttp 124 "GET /admin/ HTTP/1.1" 200 8446
+WARNING 2018-11-02 21:28:11,009 log 228 Not Found: /favicon.ico
+WARNING 2018-11-02 21:28:11,013 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6963
+INFO 2018-11-02 21:28:15,419 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8705
+INFO 2018-11-02 21:28:15,517 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 21:28:17,675 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34320
+INFO 2018-11-02 21:28:17,743 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 21:28:30,710 basehttp 124 "GET /admin/goods/ HTTP/1.1" 200 6083
+INFO 2018-11-02 21:28:34,512 basehttp 124 "GET /admin/ HTTP/1.1" 200 8446
+INFO 2018-11-02 21:28:36,664 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15700
+INFO 2018-11-02 21:28:36,730 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 21:28:38,389 basehttp 124 "GET /admin/goods/skuimage/43/change/ HTTP/1.1" 200 7263
+INFO 2018-11-02 21:28:38,464 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 21:29:21,504 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15700
+INFO 2018-11-02 21:29:26,572 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6798
+INFO 2018-11-02 21:29:26,608 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+ERROR 2018-11-02 21:29:57,974 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 59
+INFO 2018-11-02 21:31:02,467 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6798
+ERROR 2018-11-02 21:31:05,558 log 228 Internal Server Error: /admin/goods/skuimage/add/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 604, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1636, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1525, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1564, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1091, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1192, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/fields/files.py", line 288, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/fields/files.py", line 87, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/fast_dfs/storage.py", line 43, in save
+    ret = client.upload_by_buffer(content.read())  # 读取request中的文件用content
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/fdfs_client/client.py", line 125, in upload_by_buffer
+    store_serv = tc.tracker_query_storage_stor_without_group()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/fdfs_client/tracker_client.py", line 381, in tracker_query_storage_stor_without_group
+    raise DataError('[-] Error: %d, %s' % (th.status, os.strerror(th.status)))
+fdfs_client.exceptions.DataError: [-] Error: 2, No such file or directory
+ERROR 2018-11-02 21:31:05,576 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 205739
+INFO 2018-11-02 21:31:17,970 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6798
+INFO 2018-11-02 22:06:43,176 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6798
+WARNING 2018-11-02 22:06:43,887 log 228 Not Found: /favicon.ico
+WARNING 2018-11-02 22:06:43,889 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6963
+ERROR 2018-11-02 22:06:57,657 log 228 Internal Server Error: /admin/goods/skuimage/add/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 604, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1636, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1525, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1564, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1091, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1192, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/fields/files.py", line 288, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/fields/files.py", line 87, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/fast_dfs/storage.py", line 43, in save
+    ret = client.upload_by_buffer(content.read())  # 读取request中的文件用content
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/fdfs_client/client.py", line 125, in upload_by_buffer
+    store_serv = tc.tracker_query_storage_stor_without_group()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/fdfs_client/tracker_client.py", line 381, in tracker_query_storage_stor_without_group
+    raise DataError('[-] Error: %d, %s' % (th.status, os.strerror(th.status)))
+fdfs_client.exceptions.DataError: [-] Error: 2, No such file or directory
+ERROR 2018-11-02 22:06:57,672 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 205861
+INFO 2018-11-02 22:07:01,869 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6798
+INFO 2018-11-02 22:26:38,394 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6798
+INFO 2018-11-02 22:26:38,441 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,457 basehttp 124 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,492 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,503 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,503 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,516 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,517 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,517 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 22:26:38,532 basehttp 124 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,535 basehttp 124 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,545 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,548 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,568 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,576 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,583 basehttp 124 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,588 basehttp 124 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,593 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,619 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,810 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,845 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:38,852 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-02 22:26:45,887 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 302 0
+INFO 2018-11-02 22:26:46,162 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 16175
+INFO 2018-11-02 22:26:46,237 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 22:26:46,311 basehttp 124 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2018-11-02 22:26:50,683 basehttp 124 "GET /admin/goods/skuimage/44/change/ HTTP/1.1" 200 7225
+INFO 2018-11-02 22:26:50,742 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-02 22:26:59,141 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15963
+INFO 2018-11-03 14:16:10,987 basehttp 124 "GET / HTTP/1.1" 200 2
+WARNING 2018-11-03 14:16:11,150 log 228 Not Found: /favicon.ico
+WARNING 2018-11-03 14:16:11,156 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6957

@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     # 'MeiDuo.apps.users.apps.UsersConfig',  # 未添加导包路径时的注册app
     'rest_framework',  # 注册drf
     'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端
-    'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
+    'users.apps.UserConfig',  # 在添加了导包路径之后更简单的注册app
     'verifications.apps.VerificationsConfig',  # 注册验证应用
     'oauth.apps.OauthConfig',  # 注册第三方登录应用
     'areas.apps.AreasConfig',  # 注册地区应用
@@ -75,8 +75,8 @@ ROOT_URLCONF = 'MeiDuo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, '../templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        ,  # 修改模板文件的目录
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -293,3 +293,6 @@ CKEDITOR_CONFIGS = {
     },
 }
 CKEDITOR_UPLOAD_PATH = ''  # 上传图片保存路径，使用了FastDFS，所以此处设为''
+
+# 配置生成静态文件(将首页的文件定期的生成html,而不必在每次访问的时候查询数据库生成页面,从而加速打开页面)的目录
+GENERATE_STATIC_HTML_PATH = os.path.join(os.path.dirname(os.path.dirname(BASE_DIR)), 'front_end_pc')

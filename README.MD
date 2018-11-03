@@ -482,3 +482,8 @@ docker run -dti --network=host --name storage -e TRACKER_SERVER=本机ip:22122 -
 
 使用时注意每次本地的ip发生更改，则重新作为首次开启storage服务，以及修改client.conf文件中的ip！！！
 数据保存目录: /var/fdfs/storage/data
+如果无法重新运行，可以删除/var/fdfs/storage/data目录下的fdfs_storaged.pid 文件，然后重新运行storage.
+
+### 富文本编辑器
+
+使用ckeditor库来实现.
