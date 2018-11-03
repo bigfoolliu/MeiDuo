@@ -487,3 +487,13 @@ docker run -dti --network=host --name storage -e TRACKER_SERVER=本机ip:22122 -
 ### 富文本编辑器
 
 使用ckeditor库来实现.
+
+### 定时任务
+
+使用django-crontab库实现.
+
+常用命令：
+
+1. 添加定时任务到系统中 python manage.py crontab add
+2. 显示已经激活的定时任务 python manage.py crontab show
+3. 移除定时任务 python manage.py crontab remove

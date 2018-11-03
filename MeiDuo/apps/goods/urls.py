@@ -5,8 +5,10 @@
 
 
 from django.urls import path
+from django.urls import re_path
+
 from .views import *
 
 urlpatterns = [
-
+    re_path(r'^categories/(?P<category_id>\d+)/skus/$', )
 ]

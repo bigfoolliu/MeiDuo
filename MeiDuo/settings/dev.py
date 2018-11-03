@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     # 'MeiDuo.apps.users.apps.UsersConfig',  # 未添加导包路径时的注册app
     'rest_framework',  # 注册drf
     'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端
-    'users.apps.UserConfig',  # 在添加了导包路径之后更简单的注册app
+    'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
     'verifications.apps.VerificationsConfig',  # 注册验证应用
     'oauth.apps.OauthConfig',  # 注册第三方登录应用
     'areas.apps.AreasConfig',  # 注册地区应用
@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'contents.apps.ContentsConfig',  # 注册另一商品应用
     'ckeditor',  # 富文本编辑器
     'ckeditor_uploader',  # 富文本编辑器上传图片模块
+    'django_crontab',  # 注册该应用使得可以实现定时生成首页静态html任务
 ]
 
 MIDDLEWARE = [
@@ -296,3 +297,16 @@ CKEDITOR_UPLOAD_PATH = ''  # 上传图片保存路径，使用了FastDFS，所�
 
 # 配置生成静态文件(将首页的文件定期的生成html,而不必在每次访问的时候查询数据库生成页面,从而加速打开页面)的目录
 GENERATE_STATIC_HTML_PATH = os.path.join(os.path.dirname(os.path.dirname(BASE_DIR)), 'front_end_pc')
+
+# 定时任务配置
+CRONJOBS_LOG = os.path.join(BASE_DIR, 'logs/crontab.log')
+CRONJOBS = [
+    (
+        '*/5 * * * *',  # 每5分钟执行一次生成静态主页（分 时 日 月 周）
+        'contents.crons.generate_index_html',  # 表示需要执行的定时任务
+        '>> ' + CRONJOBS_LOG  # 表示生成日志存放的目录
+    )
+]
+
+# 解决crontab中文问题
+CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
