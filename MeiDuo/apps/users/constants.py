@@ -8,3 +8,5 @@
 VERIFY_EMAIL_EXPIRES = 60 * 60 * 2
 # 每个用户最多可以配置n条收货地址，n设置如下
 USER_ADDRESS_COUNTS_LIMIT = 5
+# 浏览记录上限
+BROWSE_HISTORY_LIMIT = 5

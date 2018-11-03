@@ -13,6 +13,7 @@ from django_redis import get_redis_connection
 from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 
+from goods.models import SKU
 from users import constants
 from users.models import User, Address
 from celery_tasks.email.tasks import send_verify_email
@@ -227,3 +228,43 @@ class AddressSerializer(serializers.ModelSerializer):
         address = super().create(validated_data)  # TODO: 不够理解
         return address
 
+
+class BrowseHistorySerializer(serializers.Serializer):
+    """
+    浏览历史序列化器
+    """
+    sku_id = serializers.IntegerField(min_value=1)
+
+    def validate_sku_id(self, value):
+        """
+        验证sku_id
+        :param value:
+        :return:
+        """
+        # 查询商品的sku_id是否存在
+        count = SKU.objects.filter(pk=value).count()
+        if count <= 0:
+            raise serializers.ValidationError('商品编号无效')
+
+        return value
+
+    def create(self, validated_data):
+        """
+        保存浏览历史(实际保存sku_id)
+        :param validated_data:
+        :return:
+        """
+        sku_id = validated_data['sku_id']
+        # 将数据保存至redis
+        redis_cli = get_redis_connection('history')
+        key = 'history_%d' % self.context['request'].user.id  # 根据不同的用户构造不同的键
+        # 删除sku_id
+        redis_cli.lrem(key, 0, sku_id)  # 注意redis的命令
+        # 添加
+        redis_cli.lpush(key, sku_id)
+        # 判断长度,使浏览历史的记录的条数有限,因此数据在redis中存储的格式为list
+        if redis_cli.llen(key) > constants.BROWSE_HISTORY_LIMIT:
+            # 删除最后一条记录使记录数不超过指定数量
+            redis_cli.rpop(key)
+
+        return {'sku_id': sku_id}

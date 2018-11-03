@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django_redis import get_redis_connection
+from rest_framework import generics
 from rest_framework.decorators import action
 from rest_framework.generics import CreateAPIView, UpdateAPIView, RetrieveAPIView, GenericAPIView
 from rest_framework.permissions import IsAuthenticated
@@ -8,10 +10,12 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
+from goods.models import SKU
+from goods.serializers import SKUSerializer
 from users import constants
 from users.models import User
 from users.serializers import UserCreateSerializer, EmailSerializer, UserDetailSerializer, EmailActiveSerializer, \
-    AddressSerializer
+    AddressSerializer, BrowseHistorySerializer
 
 from rest_framework_jwt.utils import jwt_response_payload_handler
 from django.contrib.auth.backends import ModelBackend
@@ -235,3 +239,37 @@ class AddressViewSet(ModelViewSet):
         user.default_address_id = pk
         user.save()
         return Response({'message': 'OK'})
+
+
+class BrowseHistoryView(generics.ListCreateAPIView):
+    """
+    浏览历史视图
+    """
+    permission_classes = [IsAuthenticated]  # 登陆的用户才能有浏览历史
+
+    def get_serializer_class(self):
+        """
+        根据不同的请求方式来指定序列化器
+        :return:
+        """
+        if self.request.method == 'GET':
+            return SKUSerializer
+        else:
+            return BrowseHistorySerializer
+
+    def get_queryset(self):
+        """
+        指定查询集,即存储在redis数据库中的对应该用户的数据
+        :return:
+        """
+        redis_cli = get_redis_connection('history')
+        key = 'history_%d' % self.request.user.id
+        # 找到所有浏览的sku的sku_id
+        sku_ids = redis_cli.lrange(key, 0, -1)
+        # 遍历列表,根据sku_id查询所有的商品对象
+        skus = []
+        for sku_id in sku_ids:
+            skus.append(SKU.objects.get(pk=int(sku_id)))  # redis中的数据均为字节需转换格式
+
+        return skus
+

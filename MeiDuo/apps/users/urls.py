@@ -17,6 +17,7 @@ urlpatterns = [
     path('user/', UserDetailView.as_view()),
     path('emails/', EmailView.as_view()),
     path('emails/verification/', EmailActiveView.as_view()),
+    path('browse_histories/', BrowseHistoryView.as_view()),
 ]
 
 # 为地址的视图集创建url地址
