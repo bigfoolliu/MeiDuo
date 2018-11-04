@@ -7,7 +7,7 @@ from rest_framework.generics import ListAPIView
 
 from goods.models import SKU
 from goods.serializers import SKUSerializer, SKUIndexSerializer
-from pagination import SKUListPagination
+from MeiDuo.utils.pagination import SKUListPagination
 
 
 class SKUListView(ListAPIView):
@@ -20,7 +20,7 @@ class SKUListView(ListAPIView):
         查询多个时，获取路径中的参数: self.kwargs表明字典
         :return:
         """
-        return SKU.objects.all(category_id=self.kwargs)
+        return SKU.objects.all(category_id=self.kwargs['category_id'])
 
     serializer_class = SKUSerializer
     # 分页功能

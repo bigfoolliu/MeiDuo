@@ -9,7 +9,7 @@ from django.template import loader
 
 from celery_tasks.main import app
 from goods.models import SKU
-from utils.goods_category import get_goods_category
+from MeiDuo.utils.goods_category import get_goods_category
 
 
 @app.task(name='generate_static_sku_detail_html')

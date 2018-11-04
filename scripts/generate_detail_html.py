@@ -26,7 +26,7 @@ from celery_tasks.html.tasks import generate_static_sku_detail_html
 from goods.models import SKU
 
 sys.path.insert(0, '../')  # 指定python解释器查找包的路径
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "meiduo.settings.dev")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "MeiDuo.settings.dev")
 django.setup()
 
 
