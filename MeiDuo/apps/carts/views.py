@@ -91,7 +91,7 @@ class CartView(APIView):
             # 连接redis并构造键
             redis_cli = get_redis_connection('cart')
             key = 'cart_%d' % request.user.id
-            key_select = 'cart_select_%d' % request.user.id
+            key_select = 'cart_selected_%d' % request.user.id
             # 将商品编号及数量存入hash中
             redis_cli.hset(key, sku_id, count)
             # 将商品编号存入set中表示选中该商品
@@ -130,7 +130,7 @@ class CartView(APIView):
             # 连接redis并构造键
             redis_cli = get_redis_connection('cart')
             key = 'cart_%d' % request.user.id
-            key_select = 'cart_select_%d' % request.user.id
+            key_select = 'cart_selected_%d' % request.user.id
             # 从hash中读取该用户加入购物车的所有的商品编号
             sku_ids = redis_cli.hkeys(key)
             # 读取选中的商品编号
@@ -185,7 +185,7 @@ class CartView(APIView):
         else:
             redis_cli = get_redis_connection('cart')
             key = 'cart_%d' % request.user.id
-            key_select = 'cart_select_%d' % request.user.id
+            key_select = 'cart_selected_%d' % request.user.id
             # 修改数量
             redis_cli.hset(key, sku_id, count)
             # 修改选中状态
@@ -272,7 +272,7 @@ class CartSelectView(APIView):
         else:
             redis_cli = get_redis_connection('cart')
             key = 'cart_%d' % request.user.id
-            key_select = 'cart_select_%d' % request.user.id
+            key_select = 'cart_selected_%d' % request.user.id
             # 获取所有的商品编号
             sku_ids = redis_cli.hkeys(key)
             if selected:

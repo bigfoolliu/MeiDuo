@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'goods.apps.GoodsConfig',  # 注册商品应用
     'contents.apps.ContentsConfig',  # 注册另一商品应用
     'carts.apps.CartsConfig',  # 购物车应用
+    'orders.apps.OrdersConfig',  # 订单应用
 
     'rest_framework',  # 注册drf
     'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端

@@ -4,7 +4,7 @@
 # !@github: bigfoolliu
 from django_redis import get_redis_connection
 
-import myjson
+from MeiDuo.utils import myjson
 
 
 def merge_cookie_to_redis(request, user_id, response):
