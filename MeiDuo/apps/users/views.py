@@ -9,7 +9,9 @@ from rest_framework.response import Response
 
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
+from rest_framework_jwt.views import ObtainJSONWebToken
 
+from carts.utils import merge_cookie_to_redis
 from goods.models import SKU
 from goods.serializers import SKUSerializer
 from users import constants
@@ -273,3 +275,30 @@ class BrowseHistoryView(generics.ListCreateAPIView):
 
         return skus
 
+
+class LoginView(ObtainJSONWebToken):
+    """
+    继承jwt中的ObtainJSONWebToken类，但是不改变其原始的功能，继续完成登录验证功能
+    在登录功能之后添加其他的功能
+    """
+
+    def post(self, request, *args, **kwargs):
+        """
+        重写登录的方法
+        :param request:
+        :param args:
+        :param kwargs:
+        :return:
+        """
+        response = super().post(request, *args, **kwargs)
+
+        if response.status_code == 200:  # 用户登录成功,注意这里的状态码为整型
+
+            print('用户登录成功')  # TODO:
+
+            # 获取用户的编号，可以从request或者登录成功的response中获取
+            user_id = response.data.get('user_id')  # response.data为一个字典
+            # 执行购物车合并操作
+            response = merge_cookie_to_redis(request, user_id, response)
+
+        return response

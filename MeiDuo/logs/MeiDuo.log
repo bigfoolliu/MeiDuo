@@ -3488,3 +3488,452 @@ INFO 2018-11-05 20:26:48,806 basehttp 124 "GET /cart/ HTTP/1.1" 200 499
 INFO 2018-11-05 20:26:53,752 views 208 Error decoding signature.
 INFO 2018-11-05 20:26:53,774 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
 INFO 2018-11-05 20:26:56,550 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-05 20:46:39,883 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-05 20:46:39,935 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-05 20:46:42,573 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-05 20:46:42,733 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-05 20:46:42,894 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-05 20:46:44,721 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-05 20:46:56,466 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-05 20:46:56,637 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-05 20:47:01,341 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-05 20:47:07,466 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-05 20:47:10,266 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-05 20:47:31,534 basehttp 124 "GET /cart/ HTTP/1.1" 200 499
+INFO 2018-11-05 20:47:44,410 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+WARNING 2018-11-05 20:47:44,422 log 228 Not Found: /categories/157/
+WARNING 2018-11-05 20:47:44,473 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8858
+INFO 2018-11-05 20:47:44,487 basehttp 124 "GET /cart/ HTTP/1.1" 200 499
+INFO 2018-11-05 20:47:46,279 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-05 20:47:46,457 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2018-11-05 20:47:48,957 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:47:52,589 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:47:55,544 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:48:13,380 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:48:15,708 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-05 20:48:18,006 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-05 20:48:19,413 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:48:21,342 basehttp 124 "OPTIONS /cart/selection/ HTTP/1.1" 200 0
+ERROR 2018-11-05 20:48:21,412 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:48:21,417 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+ERROR 2018-11-05 20:48:22,922 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:48:22,925 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+ERROR 2018-11-05 20:48:23,544 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:48:23,546 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+ERROR 2018-11-05 20:48:24,665 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:48:24,668 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+ERROR 2018-11-05 20:48:25,170 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:48:25,172 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+ERROR 2018-11-05 20:48:29,071 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:48:29,080 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+ERROR 2018-11-05 20:48:29,674 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:48:29,677 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+ERROR 2018-11-05 20:48:30,999 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:48:31,002 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+ERROR 2018-11-05 20:49:09,045 log 228 Internal Server Error: /cart/selection/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'hkeys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 277, in put
+    sku_ids = request.hkeys(key)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'hkeys'
+ERROR 2018-11-05 20:49:09,048 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 500 20661
+INFO 2018-11-05 20:50:13,826 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 20:50:14,253 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 20:50:15,240 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 20:50:16,016 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 20:50:16,578 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 20:50:44,812 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:50:45,766 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-05 20:50:49,242 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 20:50:52,581 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 20:50:53,628 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 20:50:58,593 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:50:59,096 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+WARNING 2018-11-05 20:51:43,185 log 228 Not Found: /categories/157/
+INFO 2018-11-05 20:51:43,194 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+WARNING 2018-11-05 20:51:43,195 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8858
+INFO 2018-11-05 20:51:43,196 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-05 20:51:54,980 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+WARNING 2018-11-05 20:52:01,702 log 228 Not Found: /categories/115/
+WARNING 2018-11-05 20:52:01,724 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8858
+INFO 2018-11-05 20:52:01,721 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+INFO 2018-11-05 20:52:01,729 basehttp 124 "GET /cart/ HTTP/1.1" 200 463
+INFO 2018-11-05 20:52:09,283 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-05 20:52:37,129 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-05 20:52:37,384 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-05 20:52:37,463 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2018-11-05 20:52:37,861 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1148
+INFO 2018-11-05 20:52:46,490 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:52:55,454 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:52:56,000 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:53:00,810 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:53:11,043 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-05 20:53:11,096 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+WARNING 2018-11-05 20:53:20,470 log 228 Not Found: /categories/115/
+INFO 2018-11-05 20:53:20,496 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+WARNING 2018-11-05 20:53:20,501 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8858
+INFO 2018-11-05 20:53:20,511 basehttp 124 "GET /cart/ HTTP/1.1" 200 712
+INFO 2018-11-05 20:53:28,215 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:53:32,762 basehttp 124 "GET /cart/ HTTP/1.1" 200 960
+INFO 2018-11-05 20:53:45,908 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-05 20:53:48,542 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:53:54,352 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:56:19,695 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:56:25,605 basehttp 124 "GET /cart/ HTTP/1.1" 200 960
+INFO 2018-11-05 20:56:35,023 basehttp 124 "GET /cart/ HTTP/1.1" 200 960
+INFO 2018-11-05 20:56:46,869 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-05 20:56:46,996 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-05 20:56:49,866 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:57:30,495 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:57:49,832 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-05 20:57:52,842 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:59:00,589 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 20:59:13,508 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-05 20:59:30,685 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+INFO 2018-11-05 21:00:22,873 basehttp 124 "GET /cart/ HTTP/1.1" 200 714
+ERROR 2018-11-05 21:00:34,893 log 228 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/users/views.py", line 302, in post
+    response = merge_cookie_to_redis(request, user_id, response)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/utils.py", line 36, in merge_cookie_to_redis
+    redis_pipeline = redis_cli.pipline()
+AttributeError: 'StrictRedis' object has no attribute 'pipline'
+ERROR 2018-11-05 21:00:34,898 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 20467
+ERROR 2018-11-05 21:01:08,273 log 228 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/users/views.py", line 302, in post
+    response = merge_cookie_to_redis(request, user_id, response)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/utils.py", line 36, in merge_cookie_to_redis
+    redis_pipeline = redis_cli.pipline()
+AttributeError: 'StrictRedis' object has no attribute 'pipline'
+ERROR 2018-11-05 21:01:08,276 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 20467
+ERROR 2018-11-05 21:02:27,660 log 228 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 412, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-11-05 21:02:27,680 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 91304
+ERROR 2018-11-05 21:02:59,350 log 228 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 412, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-11-05 21:02:59,354 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 91304
+INFO 2018-11-05 21:03:50,462 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-05 21:03:52,886 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-05 21:03:52,946 basehttp 124 "GET /cart/ HTTP/1.1" 200 1425
+INFO 2018-11-05 21:03:56,664 basehttp 124 "OPTIONS /cart/selection/ HTTP/1.1" 200 0
+INFO 2018-11-05 21:03:56,683 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-11-05 21:03:57,434 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16

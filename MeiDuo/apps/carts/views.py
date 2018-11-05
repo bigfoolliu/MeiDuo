@@ -274,7 +274,7 @@ class CartSelectView(APIView):
             key = 'cart_%d' % request.user.id
             key_select = 'cart_select_%d' % request.user.id
             # 获取所有的商品编号
-            sku_ids = request.hkeys(key)
+            sku_ids = redis_cli.hkeys(key)
             if selected:
                 redis_cli.sadd(key_select, *sku_ids)
             else:

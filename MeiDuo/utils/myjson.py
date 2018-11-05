@@ -35,6 +35,6 @@ def loads(my_str):
 
     dict_result = pickle.loads(bytes_hex)
 
-    print('loads() dict_result:', dict_result)  # TODO:
+    # print('loads() dict_result:', dict_result)  # TODO:
 
     return dict_result

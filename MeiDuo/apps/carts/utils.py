@@ -23,6 +23,8 @@ def merge_cookie_to_redis(request, user_id, response):
 
     cart_dict = myjson.loads(cart_str)
 
+    print('merge_cookie_to_redis cart_dict:', cart_dict)  # TODO:
+
     # 遍历字典中的信息将其写入到redis中
     redis_cli = get_redis_connection('cart')
     key_cart = 'cart_%d' % user_id
@@ -31,7 +33,7 @@ def merge_cookie_to_redis(request, user_id, response):
     获取redis的管道，因为之后要对redis数据库进行多步的操作
     可以将不同的操作放入管道一起执行
     """
-    redis_pipeline = redis_cli.pipline()
+    redis_pipeline = redis_cli.pipeline()
     for sku_id, sku_dict in cart_dict.items():
         # hash中存储商品编号以及数量
         redis_pipeline.hset(key_cart, sku_id, sku_dict['count'])
@@ -45,4 +47,6 @@ def merge_cookie_to_redis(request, user_id, response):
 
     # 将cookie中的数据删除
     response.set_cookie('cart', '', max_age=0)  # 删除数据的重点是将其过期时间设置为0
+
+    return response
 

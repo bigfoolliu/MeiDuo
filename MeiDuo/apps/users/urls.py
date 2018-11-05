@@ -13,7 +13,7 @@ urlpatterns = [
     re_path('usernames/(?P<username>\w{5,20})/count/', UsernameCountView.as_view()),
     re_path('mobiles/(?P<mobile>1[3-9]\d{9})/count/', MobileCountView.as_view()),
     path('users/', UserCreateView.as_view()),
-    path('authorizations/', obtain_jwt_token),  # 接收username和password,返回一个JSON Web Token
+    path('authorizations/', LoginView.as_view()),  # 接收username和password,返回一个JSON Web Token
     path('user/', UserDetailView.as_view()),
     path('emails/', EmailView.as_view()),
     path('emails/verification/', EmailActiveView.as_view()),
