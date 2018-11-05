@@ -56,9 +56,10 @@ class CartView(APIView):
         用户未登录则使用cookie存储用户加入购物车的信息
         cookie的原始信息如下,但是后面的字典是经过base64加密的
         cart: {
-            'sku_id': xxx,
-            'count': xxx,
-            'selected': xxx
+            'sku_id': {
+                'count': xxx,
+                'selected': xxx
+            }
         }
         """
         if user is None:
@@ -118,7 +119,8 @@ class CartView(APIView):
             cart_dict = myjson.loads(cart_str)
             # 根据商品编号查询对象并添加数量和选中属性
             skus = []
-            for key, value in cart_dict:
+            print('cart_dict:', cart_dict, type(cart_dict))  # TODO:
+            for key, value in cart_dict.items():
                 sku = SKU.objects.get(pk=key)
                 sku.count = value['count']
                 sku.selected = value['selected']

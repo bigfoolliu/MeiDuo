@@ -3294,3 +3294,197 @@ Traceback (most recent call last):
     dict_result = pickle.loads(bytes_hex)
 _pickle.UnpicklingError: invalid load key, '\xf3'.
 ERROR 2018-11-05 16:29:59,466 basehttp 124 "POST /cart/ HTTP/1.1" 500 20469
+INFO 2018-11-05 20:09:21,300 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-05 20:09:21,387 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 72, in post
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 20:09:21,391 basehttp 124 "POST /cart/ HTTP/1.1" 500 20469
+ERROR 2018-11-05 20:09:23,896 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 72, in post
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 20:09:23,901 basehttp 124 "POST /cart/ HTTP/1.1" 500 20469
+INFO 2018-11-05 20:19:38,905 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-05 20:19:39,213 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 72, in post
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 20:19:39,233 basehttp 124 "POST /cart/ HTTP/1.1" 500 20469
+INFO 2018-11-05 20:20:13,542 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-11-05 20:20:24,923 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+ERROR 2018-11-05 20:20:32,766 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 121, in get
+    for key, value in cart_dict:
+TypeError: 'int' object is not iterable
+ERROR 2018-11-05 20:20:32,772 basehttp 124 "GET /cart/ HTTP/1.1" 500 19920
+ERROR 2018-11-05 20:20:35,193 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 121, in get
+    for key, value in cart_dict:
+TypeError: 'int' object is not iterable
+ERROR 2018-11-05 20:20:35,202 basehttp 124 "GET /cart/ HTTP/1.1" 500 19953
+ERROR 2018-11-05 20:21:56,135 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 121, in get
+    for key, value in cart_dict:
+TypeError: 'int' object is not iterable
+ERROR 2018-11-05 20:21:56,149 basehttp 124 "GET /cart/ HTTP/1.1" 500 19977
+WARNING 2018-11-05 20:25:04,563 log 228 Not Found: /categories/115/
+WARNING 2018-11-05 20:25:04,587 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8858
+INFO 2018-11-05 20:25:04,744 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+ERROR 2018-11-05 20:25:05,006 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 123, in get
+    for key, value in cart_dict:
+TypeError: 'int' object is not iterable
+ERROR 2018-11-05 20:25:05,059 basehttp 124 "GET /cart/ HTTP/1.1" 500 19928
+INFO 2018-11-05 20:25:08,323 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+ERROR 2018-11-05 20:25:11,924 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 123, in get
+    for key, value in cart_dict:
+TypeError: 'int' object is not iterable
+ERROR 2018-11-05 20:25:11,931 basehttp 124 "GET /cart/ HTTP/1.1" 500 20024
+INFO 2018-11-05 20:26:48,806 basehttp 124 "GET /cart/ HTTP/1.1" 200 499
+INFO 2018-11-05 20:26:53,752 views 208 Error decoding signature.
+INFO 2018-11-05 20:26:53,774 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-11-05 20:26:56,550 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
