@@ -6,6 +6,7 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from carts.utils import merge_cookie_to_redis
 from oauth import constants
 from oauth.models import QQUser
 from oauth.qq_sdk import OAuthQQ
@@ -78,11 +79,16 @@ class QQLoginView(APIView):
             })
         else:
             # 如果存在则进行状态保持,登录成功
-            return Response({
+            response = Response({
                 'user_id': qquser.user.id,
                 'username': qquser.user.username,
                 'token': generate(qquser.user)  # 生成token值
             })
+
+            # 实现qq登录时购物车的合并
+            response = merge_cookie_to_redis(request, qquser.user.id, response)
+
+            return response
 
     def post(self, request):
         """
@@ -98,9 +104,14 @@ class QQLoginView(APIView):
         # 绑定: 在qquser表中创建一条数据
         qquser = serializer.save()
         # 响应
-        return Response({
+        response = Response({
             'user_id': qquser.user.id,
             'username': qquser.user.username,
             'token': generate(qquser.user)
         })
+
+        # 实现qq登录时购物车的合并
+        response = merge_cookie_to_redis(request, qquser.user.id, response)
+
+        return response
 
