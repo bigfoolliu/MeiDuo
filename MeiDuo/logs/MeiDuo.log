@@ -3142,3 +3142,155 @@ Traceback (most recent call last):
     dict_result = pickle.loads(bytes_hex)
 _pickle.UnpicklingError: invalid load key, '\xf3'.
 ERROR 2018-11-05 11:46:53,306 basehttp 124 "POST /cart/ HTTP/1.1" 500 20470
+INFO 2018-11-05 16:27:47,008 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-05 16:27:47,317 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 72, in post
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 16:27:47,346 basehttp 124 "POST /cart/ HTTP/1.1" 500 20527
+ERROR 2018-11-05 16:29:18,232 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 118, in get
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 16:29:18,236 basehttp 124 "GET /cart/ HTTP/1.1" 500 20444
+ERROR 2018-11-05 16:29:20,857 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 118, in get
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 16:29:20,868 basehttp 124 "GET /cart/ HTTP/1.1" 500 20477
+ERROR 2018-11-05 16:29:37,230 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 118, in get
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 16:29:37,243 basehttp 124 "GET /cart/ HTTP/1.1" 500 20477
+WARNING 2018-11-05 16:29:44,902 log 228 Not Found: /categories/115/
+WARNING 2018-11-05 16:29:44,967 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8858
+ERROR 2018-11-05 16:29:44,886 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 118, in get
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 16:29:44,969 basehttp 124 "GET /cart/ HTTP/1.1" 500 20452
+INFO 2018-11-05 16:29:44,974 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+INFO 2018-11-05 16:29:47,297 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 692
+INFO 2018-11-05 16:29:49,258 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 699
+INFO 2018-11-05 16:29:50,242 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 692
+INFO 2018-11-05 16:29:50,999 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 699
+ERROR 2018-11-05 16:29:59,463 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 72, in post
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 42, in loads
+    dict_result = pickle.loads(bytes_hex)
+_pickle.UnpicklingError: invalid load key, '\xf3'.
+ERROR 2018-11-05 16:29:59,466 basehttp 124 "POST /cart/ HTTP/1.1" 500 20469
