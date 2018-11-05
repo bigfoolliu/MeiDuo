@@ -24,5 +24,6 @@ urlpatterns = [
     path('', include('areas.urls')),
     path('', include('goods.urls')),
     path('', include('contents.urls')),
+    path('', include('carts.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),  # 用于访问ckeditor富文本编辑器
 ]

@@ -47,14 +47,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 'MeiDuo.apps.users.apps.UsersConfig',  # 未添加导包路径时的注册app
-    'rest_framework',  # 注册drf
-    'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端
+
     'users.apps.UsersConfig',  # 在添加了导包路径之后更简单的注册app
     'verifications.apps.VerificationsConfig',  # 注册验证应用
     'oauth.apps.OauthConfig',  # 注册第三方登录应用
     'areas.apps.AreasConfig',  # 注册地区应用
     'goods.apps.GoodsConfig',  # 注册商品应用
     'contents.apps.ContentsConfig',  # 注册另一商品应用
+    'carts.apps.CartsConfig',  # 购物车应用
+
+    'rest_framework',  # 注册drf
+    'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端
     'ckeditor',  # 富文本编辑器
     'ckeditor_uploader',  # 富文本编辑器上传图片模块
     'django_crontab',  # 注册该应用使得可以实现定时生成首页静态html任务
@@ -173,6 +176,14 @@ CACHES = {
     "history": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://127.0.0.1:6379/3",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+    # 用户登录时购物车中商品信息在redis中的配置
+    "cart": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/4",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }

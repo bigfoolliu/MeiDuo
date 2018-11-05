@@ -518,3 +518,33 @@ Elasticsearch:
 
 命令：
 1. 手动生成初始索引　python manage.py rebuild_index
+
+## 购物车设计
+
+存储结构:
+1. 用户登陆使用redis存储加入购物车的商品
+2. 用户未登陆使用cookie来存储加入购物车的商品
+3. 登陆后合并购物车
+
+### 添加到购物车后端接口
+
+访问此接口，无论用户是否登录，前端请求都需携带请求头Authorization，由后端判断是否登录.
+
++ 访问方式:  POST　cart/
++ 请求参数:  json或表单
+
+    ```text
+    参数名       类型    是否必须     说明
+    sku_id	    int	    是	        商品sku_id
+    count	    int	    是	        数量
+    selected	bool	否	        是否勾选，默认勾选
+    ```
+
++ 返回数据: JSON
+
+    ```text
+    参数名       类型    是否必须     说明
+    sku_id	    int	    是	        商品sku_id
+    count	    int	    是	        数量
+    selected	bool	是	        是否勾选，默认勾选
+    ```
