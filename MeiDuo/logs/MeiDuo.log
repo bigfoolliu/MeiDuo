@@ -4081,3 +4081,467 @@ INFO 2018-11-05 22:09:27,514 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
 INFO 2018-11-05 22:09:28,700 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
 INFO 2018-11-05 22:09:28,763 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 521
 INFO 2018-11-05 22:09:28,768 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 14:19:52,302 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-11-06 14:19:52,315 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-06 14:19:52,331 log 228 Unauthorized: /orders/settlement/
+WARNING 2018-11-06 14:19:52,333 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 401 35
+WARNING 2018-11-06 14:19:52,366 log 228 Unauthorized: /addresses/
+WARNING 2018-11-06 14:19:52,379 basehttp 124 "GET /addresses/ HTTP/1.1" 401 35
+INFO 2018-11-06 14:20:02,176 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-06 14:20:02,488 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-06 14:20:03,331 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-06 14:20:03,555 basehttp 124 "GET /cart/ HTTP/1.1" 200 712
+INFO 2018-11-06 14:20:09,399 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 521
+INFO 2018-11-06 14:20:09,440 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 14:20:18,446 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-06 14:20:19,816 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-06 14:20:21,384 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 733
+INFO 2018-11-06 14:20:21,394 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 14:23:10,150 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
+INFO 2018-11-06 14:23:10,337 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
+INFO 2018-11-06 14:23:10,431 basehttp 124 "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+INFO 2018-11-06 14:23:10,449 basehttp 124 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17976
+INFO 2018-11-06 14:23:10,453 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 200 16225
+INFO 2018-11-06 14:23:10,566 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2018-11-06 14:23:10,615 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+INFO 2018-11-06 14:23:10,633 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+WARNING 2018-11-06 14:23:10,728 log 228 Not Found: /favicon.ico
+WARNING 2018-11-06 14:23:10,734 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 8953
+INFO 2018-11-06 14:23:12,594 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2018-11-06 14:23:12,662 basehttp 124 "GET /admin/ HTTP/1.1" 200 8776
+INFO 2018-11-06 14:23:12,702 basehttp 124 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO 2018-11-06 14:23:12,758 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+INFO 2018-11-06 14:23:12,774 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2018-11-06 14:23:12,793 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2018-11-06 14:25:48,726 basehttp 124 "GET /admin/ HTTP/1.1" 200 9937
+INFO 2018-11-06 14:25:48,810 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:48,814 basehttp 124 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:48,818 basehttp 124 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:48,857 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:48,900 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:48,966 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:49,000 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:48,983 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:49,042 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2018-11-06 14:25:52,905 basehttp 124 "GET /admin/orders/ordergoods/ HTTP/1.1" 200 3214
+INFO 2018-11-06 14:25:53,065 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+INFO 2018-11-06 14:25:53,066 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+INFO 2018-11-06 14:25:53,066 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+INFO 2018-11-06 14:25:53,074 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 200 7135
+INFO 2018-11-06 14:25:53,110 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+INFO 2018-11-06 14:25:53,132 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 200 6538
+INFO 2018-11-06 14:25:53,155 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 200 8972
+INFO 2018-11-06 14:25:53,167 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+INFO 2018-11-06 14:25:53,187 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+INFO 2018-11-06 14:25:53,194 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-06 14:25:53,911 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2018-11-06 14:25:58,858 basehttp 124 "GET /admin/orders/ordergoods/add/ HTTP/1.1" 200 10695
+INFO 2018-11-06 14:25:58,996 basehttp 124 "GET /static/admin/css/forms.css HTTP/1.1" 200 8505
+INFO 2018-11-06 14:25:59,013 basehttp 124 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2018-11-06 14:25:59,020 basehttp 124 "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+INFO 2018-11-06 14:25:59,024 basehttp 124 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+INFO 2018-11-06 14:25:59,073 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-06 14:25:59,100 basehttp 124 "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+INFO 2018-11-06 14:26:13,765 basehttp 124 "GET /admin/orders/ordergoods/ HTTP/1.1" 200 3214
+INFO 2018-11-06 14:26:29,216 basehttp 124 "GET /admin/ HTTP/1.1" 200 9937
+INFO 2018-11-06 14:26:31,983 basehttp 124 "GET /admin/orders/orderinfo/ HTTP/1.1" 200 3242
+INFO 2018-11-06 14:26:32,037 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-06 14:26:35,845 basehttp 124 "GET /admin/orders/orderinfo/add/ HTTP/1.1" 200 8089
+INFO 2018-11-06 14:26:35,918 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2018-11-06 14:26:45,354 basehttp 124 "GET /admin/orders/orderinfo/ HTTP/1.1" 200 3242
+INFO 2018-11-06 17:13:04,861 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-11-06 17:13:04,881 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-06 17:13:04,912 log 228 Unauthorized: /orders/settlement/
+WARNING 2018-11-06 17:13:04,912 log 228 Unauthorized: /addresses/
+WARNING 2018-11-06 17:13:04,912 basehttp 124 "GET /addresses/ HTTP/1.1" 401 35
+WARNING 2018-11-06 17:13:04,921 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 401 35
+INFO 2018-11-06 17:13:13,537 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-06 17:13:13,653 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-06 17:13:14,018 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-06 17:13:14,143 basehttp 124 "GET /cart/ HTTP/1.1" 200 711
+INFO 2018-11-06 17:13:17,226 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 733
+INFO 2018-11-06 17:13:17,253 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 17:13:22,810 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+ERROR 2018-11-06 17:13:22,891 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 73, in create
+    pay_method=pay_method,
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:13:22,896 basehttp 124 "POST /orders/ HTTP/1.1" 500 21342
+ERROR 2018-11-06 17:13:24,322 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 73, in create
+    pay_method=pay_method,
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:13:24,325 basehttp 124 "POST /orders/ HTTP/1.1" 500 21342
+ERROR 2018-11-06 17:13:24,798 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 73, in create
+    pay_method=pay_method,
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:13:24,802 basehttp 124 "POST /orders/ HTTP/1.1" 500 21342
+ERROR 2018-11-06 17:13:24,994 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 73, in create
+    pay_method=pay_method,
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:13:24,997 basehttp 124 "POST /orders/ HTTP/1.1" 500 21342
+ERROR 2018-11-06 17:13:25,201 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 73, in create
+    pay_method=pay_method,
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:13:25,204 basehttp 124 "POST /orders/ HTTP/1.1" 500 21342
+ERROR 2018-11-06 17:13:40,967 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 73, in create
+    pay_method=pay_method,
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:13:40,970 basehttp 124 "POST /orders/ HTTP/1.1" 500 21342
+INFO 2018-11-06 17:16:40,080 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 733
+INFO 2018-11-06 17:16:40,101 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+ERROR 2018-11-06 17:16:42,717 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 73, in create
+    pay_method=pay_method
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:16:42,721 basehttp 124 "POST /orders/ HTTP/1.1" 500 21341
+ERROR 2018-11-06 17:18:26,589 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 76, in create
+    pay_method=pay_method
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:18:26,606 basehttp 124 "POST /orders/ HTTP/1.1" 500 21341
+INFO 2018-11-06 17:18:30,929 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 733
+INFO 2018-11-06 17:18:30,992 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 17:20:17,699 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 733
+INFO 2018-11-06 17:20:17,707 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+ERROR 2018-11-06 17:20:26,037 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 76, in create
+    pay_method=pay_method
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 411, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/base.py", line 485, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwarg)
+TypeError: 'freght' is an invalid keyword argument for this function
+ERROR 2018-11-06 17:20:26,041 basehttp 124 "POST /orders/ HTTP/1.1" 500 21341
+INFO 2018-11-06 17:21:25,256 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 733
+INFO 2018-11-06 17:21:25,273 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 17:21:27,606 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-11-06 17:24:08,166 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-06 17:24:08,165 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-11-06 17:24:08,480 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 24
+INFO 2018-11-06 17:24:08,600 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 17:24:13,318 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-06 17:24:13,382 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-11-06 17:24:17,027 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-11-06 17:24:25,352 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-11-06 17:24:25,353 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+WARNING 2018-11-06 17:24:25,387 log 228 Not Found: /categories/115/
+WARNING 2018-11-06 17:24:25,388 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8965
+INFO 2018-11-06 17:24:27,227 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-06 17:24:27,330 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-06 17:24:29,722 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-06 17:24:33,351 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-06 17:24:34,484 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+WARNING 2018-11-06 17:24:43,763 log 228 Not Found: /categories/157/
+WARNING 2018-11-06 17:24:43,775 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8965
+INFO 2018-11-06 17:24:43,784 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+INFO 2018-11-06 17:24:43,797 basehttp 124 "GET /cart/ HTTP/1.1" 200 499
+INFO 2018-11-06 17:24:45,641 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2018-11-06 17:24:46,666 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-11-06 17:24:51,799 basehttp 124 "GET /cart/ HTTP/1.1" 200 711
+INFO 2018-11-06 17:25:08,089 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 733
+INFO 2018-11-06 17:25:08,109 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 17:25:14,751 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-11-06 17:25:14,836 basehttp 124 "POST /orders/ HTTP/1.1" 201 32
+ERROR 2018-11-06 17:27:30,230 exceptions 37 [<orders.views.OrderCreateView object at 0x7fa2007512e8>] wrong number of arguments for 'hdel' command
+ERROR 2018-11-06 17:27:30,231 log 228 Insufficient Storage: /orders/
+ERROR 2018-11-06 17:27:30,235 basehttp 124 "POST /orders/ HTTP/1.1" 507 35
+INFO 2018-11-06 17:27:34,218 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 24
+INFO 2018-11-06 17:27:34,250 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+WARNING 2018-11-06 17:27:40,440 log 228 Not Found: /categories/115/
+INFO 2018-11-06 17:27:40,444 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+WARNING 2018-11-06 17:27:40,453 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8965
+INFO 2018-11-06 17:27:40,453 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-11-06 17:27:41,951 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-06 17:27:43,009 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-06 17:27:46,219 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-06 17:27:47,296 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+WARNING 2018-11-06 17:27:55,347 log 228 Not Found: /categories/157/
+WARNING 2018-11-06 17:27:55,355 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8965
+INFO 2018-11-06 17:27:55,358 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+INFO 2018-11-06 17:27:55,361 basehttp 124 "GET /cart/ HTTP/1.1" 200 501
+INFO 2018-11-06 17:27:56,711 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2018-11-06 17:27:58,656 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-11-06 17:28:02,281 basehttp 124 "GET /cart/ HTTP/1.1" 200 713
+INFO 2018-11-06 17:28:05,251 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 735
+INFO 2018-11-06 17:28:05,284 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-06 17:28:08,011 basehttp 124 "POST /orders/ HTTP/1.1" 201 38

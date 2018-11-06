@@ -37,7 +37,7 @@ class OrderInfo(BaseModel):
         (6, "已取消"),
     )
 
-    # 年月日时分秒+用户编号
+    # 年月日时分秒+用户编号,作为唯一标识一个订单
     order_id = models.CharField(max_length=64, primary_key=True, verbose_name="订单号")
     user = models.ForeignKey(User, on_delete=models.PROTECT, verbose_name="下单用户")
     address = models.ForeignKey(Address, on_delete=models.PROTECT, verbose_name="收获地址")

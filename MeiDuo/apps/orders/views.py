@@ -2,12 +2,14 @@ from django.shortcuts import render
 
 # Create your views here.
 from django_redis import get_redis_connection
+from rest_framework.generics import CreateAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from carts.serializers import CartSerializer
 from goods.models import SKU
+from orders.serializers import OrderCreateSerializer
 
 
 class CartListView(APIView):
@@ -53,3 +55,11 @@ class CartListView(APIView):
             'freight': 10,  # 运费
             'skus': serializer.data
         })
+
+
+class OrderCreateView(CreateAPIView):
+    """
+    创建订单后端接口
+    """
+    permission_classes = [IsAuthenticated]
+    serializer_class = OrderCreateSerializer

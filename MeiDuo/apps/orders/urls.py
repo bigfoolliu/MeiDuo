@@ -8,4 +8,5 @@ from .views import *
 
 urlpatterns = [
     path('settlement/', CartListView.as_view()),
+    path('', OrderCreateView.as_view()),
 ]
