@@ -5,29 +5,78 @@
 + 在/front_end_pc目录下通过node.js提供的**live-server**服务作为前端服务器
 + live-server运行在8080端口下，可以通过**127.0.0.1:8080**来访问静态页面
 
-### 目录说明
+命令:
+
+    ```text
+    安装node.js的版本控制工具nvm，在终端中执行:
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+    
+    nvm安装最新版本的node.js
+    nvm install node
+    
+    安装live-server
+    npm install -g live-server
+    
+    创建数据库
+    create database meiduo_mall default charset=utf8;
+     
+    为本项目创建数据库用户（不再使用root账户）
+    create user meiduo identified by 'meiduo';      创建用户账号 meiduo, 密码 meiduo (由identified by 指明)
+    grant all on meiduo_mall.* to 'meiduo'@'%';     授权meiduo_mall数据库下的所有表的所有权限以任何ip访问数据库给用户meiduo
+    flush privileges;                               刷新生效用户权限
+    ```
+
+## 项目架构
+
+如图：
+
+![image](https://github.com/bigfoolliu/MeiDuo/tree/linux_version/images/项目整体架构.png)
+
+## 目录说明
 
 > MeiDuo
->> front_end_pc
->>
->> celery_tasks
->>
 >> MeiDuo
->>> apps------>存放Django应用
+>>> apps---------->存放Django应用
+>>>> areas-------->收货地址模块
+>>>>
+>>>> carts-------->购物车磨模块
+>>>>
+>>>> contents----->
+>>>>
+>>>> goods--------->商品模块
+>>>>
+>>>> oauth--------->第三方登录(qq登录)模块
+>>>>
+>>>> orders-------->订单模块
+>>>>
+>>>> users--------->用户模块
+>>>>
+>>>> verifications-->
+>>>>
+>>> logs---------->存放日志文件
 >>>
->>> logs------>存放日志文件
+>>> settings------>存放配置文件的目录，分为开发dev和线上prod
 >>>
->>> settings-->存放配置文件的目录，分为开发dev和线上prod
+>>> utils--------->存放项目自己定义的公共函数或类等
 >>>
->>> utils----->存放项目自己定义的公共函数或类等
+>>> templates----->存放模板文件
+>>>> search------->
+>>>>
 >>>
->>> docs------>用于存放一些说明文档资料
+>>> docs---------->用于存放一些说明文档资料
 >>>
->>> scripts--->用于存放管理脚本文件
+>> celery_tasks--->用于存放使用celery执行的耗时任务代码
+>>> email--------->发送email耗时代码
 >>>
->>> libs------>存放第三方的库文件
+>>> html---------->生成静态html耗时代码
 >>>
->> templates
+>>> sms------------>发送短信验证码耗时代码
+>>>
+>>
+>> images--------->用于存放README文件中的图片
+>>
+>> scripts-------->用于存放管理脚本文件
+>>
 >>
 >> .gitignore
 >>
@@ -39,6 +88,8 @@
 
 ### Django认证系统组成
 
+[参考文档](https://yiyibooks.cn/xx/Django_1.11.6/topics/auth/index.html)
+
 + 用户
 + 权限：二元（是/否）标志指示一个用户是否可以做一个特定的任务。
 + 组：对多个用户运用标签和权限的一种通用的方式。
@@ -46,7 +97,8 @@
 + 用户登录或内容显示的表单和视图
 + 一个可插拔的后台系统
 
-Django默认提供的认证系统中，用户的认证机制依赖Session机制，我们在本项目中将引入JWT认证机制，将用户的身份凭据存放在Token中，然后对接Django的认证系统,实现:
+Django默认提供的认证系统中，用户的认证机制依赖Session机制，
+我们在本项目中将引入JWT认证机制，将用户的身份凭据存放在token中，然后对接Django的认证系统,实现:
 
 + 用户的数据模型
 + 用户密码的加密与验证
@@ -58,6 +110,28 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 + 后端: api.meiduo.site
 
 前后端访问使用不同的域名,所以当端访问前端的数据时,需要添加CORS(跨域访问)的配置.
+[使用django-cors-headers扩展解决跨域问题参考文档](https://github.com/ottoyiu/django-cors-headers/)
+
+    ```text
+    编辑/etc/hosts文件，可以设置本地域名
+    sudo vim /etc/hosts
+    
+    在文件中增加两条信息
+    127.0.0.1   api.meiduo.site
+    127.0.0.1   www.meiduo.site
+    ```
+
+一旦不再使用127.0.0.1访问Django后端，需要在配置文件中修改ALLOWED_HOSTS，增加可以访问后端的域名.
+
+    ```text
+    ALLOWED_HOSTS = [
+        'api.meiduo.site', 
+        '127.0.0.1', 
+        'localhost', 
+        'www.meiduo.site'
+    ]
+    ```
+
 
 ## 注册业务
 
@@ -70,7 +144,7 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 
 ### 短信验证码
 
-#### 业务流程
+业务流程:
 
 1. 检查是否在60s内有发送记录
 2. 生成短信验证码
@@ -80,8 +154,19 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 #### 后端接口设计
 
 + 访问方式:  GET /sms_code/(?P<mobile>1[3-9]\d{9})/
-+ 请求参数: mobile: str,必须有,手机号
-+ 返回数据: message: str,非必传,OK(发送成功),JSON
++ 请求参数:  路径参数与查询字符串参数
+
+    ```text
+    参数名   类型    是否必须     说明
+    mobile	str	    是	        手机号
+    ```
+
++ 返回数据: JSON
+
+    ```text
+    参数名       类型    是否必须     说明
+    message	    str	    否	        OK，发送成功
+    ```
 
 ### celery
 
@@ -94,11 +179,8 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 + worker: 工人------>从队列中获取任务并执行
 + queue: 队列------->先进先出,维护任务的先后顺序
 
-启动celery服务
-
-进入到终端, 编写如下命令执行(linux):
-
 ```text
+启动celery服务
 celery -A celery_tasks.main worker -l info
 ```
 
@@ -109,54 +191,58 @@ pip install eventlet
 celery -A celery_tasks.main worker -l info -P eventlet
 ```
 
-### 判断账号是否存在
+### 判断账号是否存在后端接口
 
-#### 后端接口设计
++ 访问方式:  GET /usernames/(?P<username>\w{5,20})/count/
++ 请求参数:  路径参数与查询字符串参数
 
-+ 访问方式:  GET usernames/(?P<username>\w{5,20})/count/
-+ 请求参数: username: str,必须有,用户名
-+ 返回数据: username: str,必须有,用户名; count: int,必须有,数量
-
-    ```json
-    {
-        "username": "itcast",
-        "count": "1"
-    }
+    ```text
+    参数名      类型   是否必须    说明
+    username    str    是	    用户名
     ```
 
-### 判断手机号是否存在
++ 返回数据: JSON
 
-#### 后端接口设计
-
-+ 访问方式:  GET mobiles/(?P<mobile>1[3-9]\d{9})/count/
-+ 请求参数: mobile: str,必须有,用户名
-+ 返回数据: mobile: str,必须有,手机号; count: int,必须有,数量
-
-    ```json
-    {
-        "mobile": "13112341234",
-        "count": "1"
-    }
+    ```text
+    参数名      类型    是否必须   说明
+    username    str     是      用户名
+    count       int     是      数量
     ```
 
-### 具体注册
+### 判断手机号是否存在后端接口
 
-#### 后端接口设计
++ 访问方式:  GET /mobiles/(?P<mobile>1[3-9]\d{9})/count/
++ 请求参数:  路径参数与查询字符串参数
+
+    ```text
+    参数名      类型   是否必须    说明
+    mobile     str	  是        手机号
+    ```
+
++ 返回数据: JSON
+
+    ```text
+    参数名      类型    是否必须   说明
+    mobile     str     是        手机号
+    count      int     是        数量
+    ```
+
+### 注册后端接口
 
 + 访问方式:  POST /users/
-+ 请求参数:
++ 请求参数:  JSON或表单
 
     ```text
     参数名          类型    是否必须     说明
-    username        str     是          用户名
-    password        str     是          密码
-    password2       str     是          确认密码
-    sms_code        str     是          短信验证码
-    mobile          str     是          手机号
-    allow           str     是          是否同意用户协议
+    username        str     是         用户名
+    password        str     是         密码
+    password2       str     是         确认密码
+    sms_code        str     是         短信验证码
+    mobile          str     是         手机号
+    allow           str     是         是否同意用户协议
     ```
 
-+ 返回数据:
++ 返回数据: JSON
 
     ```text
     返回值      类型    是否必须      说明
@@ -165,14 +251,7 @@ celery -A celery_tasks.main worker -l info -P eventlet
     mobile      str     是          手机号
     ```
 
-    ```json
-    {
-        "mobile": "13112341234",
-        "count": "1"
-    }
-    ```
-
-#### JWT
+### JWT
 
 Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准（(RFC 7519).
 不再使用Session认证机制, 而使用Json Web Token认证机制.
@@ -548,3 +627,116 @@ Elasticsearch:
     count	    int	    是	        数量
     selected	bool	是	        是否勾选，默认勾选
     ```
+
+### 查询购物车后端接口
+
++ 访问方式:  GET　cart/
++ 请求参数:  无
++ 返回数据: JSON
+
+    ```text
+    参数名               类型    是否必须     说明
+    id	                int	    是	        商品sku id
+    count	            int	    是	        数量
+    selected	        bool	是	        是否勾选，默认勾选
+    name	            str	    是	        商品名称
+    default_image_url	str	    是	        商品默认图片
+    price	            decimal	是	        商品单价
+    ```
+
+### 修改购物车后端接口
+
++ 访问方式:  PUT　cart/
++ 请求参数:  json或表单
+
+    ```text
+    参数名       类型    是否必须     说明
+    sku_id	    int	    是	        商品sku id
+    count	    int	    是	        数量
+    selected	bool	否	        是否勾选，默认勾选
+    ```
+
++ 返回数据: JSON
+
+    ```text
+    参数名       类型    是否必须     说明
+    sku_id	    int	    是	        商品sku id
+    count	    int	    是	        数量
+    selected	bool	是	        是否勾选，默认勾选
+    ```
+
+### 删除购物车后端接口
+
++ 访问方式:  DELETE　cart/
++ 请求参数:  json或表单
+
+    ```text
+    参数名       类型    是否必须     说明
+    sku_id	    int	    是	        商品sku id
+    ```
+
++ 返回数据: 无，状态码204
+
+### 购物车全选后端接口
+
++ 访问方式:  PUT　cart/selection/
++ 请求参数:  json或表单
+
+    ```text
+    参数名       类型    是否必须     说明
+    selected	bool	是	    是否全选，true表示全选，false表示取消全选
+    ```
+
++ 返回数据: JSON
+
+    ```text
+    参数名       类型    是否必须     说明
+    message	    str	    是	        ok
+    ```
+
+### 登录合并购物车
+
+即将未登录时加入购物车中的cookie数据合并到登录账户中，默认由cookie会直接增加到登录的用户redis购物车数据中。
+
+普通登录和qq登录都需要合并，故将合并的代码放到一个单独的模块。在普通登录和qq登录的视图post方法的代码中进行更改。
+
+## 订单
+
+### 订单结算后端接口
+
++ 访问方式:  GET orders/settlement/
++ 请求参数:  无
++ 返回数据: JSON
+
+    ```text
+    参数名               类型      是否必须     说明
+    freight	            decimal	    是	    运费
+    skus	            sku[]	    是	    结算的商品列表
+    id	                int	        是	    商品id
+    name	            str	        是	    商品名称
+    default_image_url	str	        是	    商品默认图片
+    price	            decimal	    是	    商品单价
+    count	            int	        是	    商品数量
+    ```
+
+### 保存订单后端接口
+
++ 访问方式:  POST orders/
++ 请求参数:  json或表单
+
+    ```text
+    参数名       类型    是否必须     说明
+    address	    int	    是	    收货地址id
+    pay_method	int	    是	    支付方式
+    ```
+
++ 返回数据: JSON
+
+    ```text
+    参数名       类型    是否必须     说明
+    order_id	char	是	        订单编号
+    ```
+
+
+
+

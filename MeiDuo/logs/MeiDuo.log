@@ -4585,3 +4585,211 @@ INFO 2018-11-06 17:55:01,016 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200
 INFO 2018-11-06 17:55:01,051 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
 WARNING 2018-11-06 17:55:03,917 log 228 Bad Request: /orders/
 WARNING 2018-11-06 17:55:03,921 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+INFO 2018-11-07 20:44:55,827 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:44:55,973 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-07 20:46:18,413 basehttp 124 "GET /usernames/tonyliu2/count/ HTTP/1.1" 200 33
+INFO 2018-11-07 20:46:31,118 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 200 34
+INFO 2018-11-07 20:46:31,929 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 200 34
+INFO 2018-11-07 20:46:32,257 basehttp 124 "GET /sms_code/13111111111/ HTTP/1.1" 200 18
+INFO 2018-11-07 20:46:55,347 basehttp 124 "GET /usernames/tonyliu2/count/ HTTP/1.1" 200 33
+INFO 2018-11-07 20:46:55,351 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 200 34
+INFO 2018-11-07 20:46:55,356 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:46:55,519 basehttp 124 "POST /users/ HTTP/1.1" 201 229
+WARNING 2018-11-07 20:47:37,485 log 228 Not Found: /categories/115/
+INFO 2018-11-07 20:47:37,493 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-07 20:47:37,542 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8965
+INFO 2018-11-07 20:47:37,560 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+INFO 2018-11-07 20:47:37,561 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-11-07 20:47:39,717 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:47:39,746 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-07 20:47:42,383 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-07 20:47:51,301 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-07 20:47:55,308 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-11-07 20:48:05,955 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+WARNING 2018-11-07 20:48:05,959 log 228 Not Found: /categories/157/
+WARNING 2018-11-07 20:48:05,960 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8965
+INFO 2018-11-07 20:48:05,961 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-11-07 20:48:08,749 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2018-11-07 20:48:11,191 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-11-07 20:48:15,972 basehttp 124 "GET /cart/ HTTP/1.1" 200 216
+INFO 2018-11-07 20:48:24,496 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:48:24,559 basehttp 124 "GET /cart/ HTTP/1.1" 200 428
+INFO 2018-11-07 20:48:26,673 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-11-07 20:48:27,064 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+WARNING 2018-11-07 20:48:33,260 log 228 Not Found: /categories/157/
+WARNING 2018-11-07 20:48:33,304 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8965
+INFO 2018-11-07 20:48:33,312 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+INFO 2018-11-07 20:48:33,318 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-11-07 20:48:35,150 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:48:35,275 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2018-11-07 20:48:37,069 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-11-07 20:48:40,002 basehttp 124 "GET /cart/ HTTP/1.1" 200 216
+INFO 2018-11-07 20:49:22,807 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:49:22,810 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:49:22,986 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 238
+INFO 2018-11-07 20:49:23,028 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-07 20:49:39,609 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:49:39,610 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:49:39,763 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-11-07 20:49:39,770 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 238
+INFO 2018-11-07 20:49:42,251 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-11-07 20:49:42,284 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-07 20:49:49,637 basehttp 124 "GET /areas/130000/ HTTP/1.1" 200 464
+INFO 2018-11-07 20:49:51,609 basehttp 124 "GET /areas/130200/ HTTP/1.1" 200 503
+INFO 2018-11-07 20:50:12,494 basehttp 124 "POST /addresses/ HTTP/1.1" 201 242
+INFO 2018-11-07 20:50:13,958 basehttp 124 "OPTIONS /addresses/3/status/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:50:13,991 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 200 16
+INFO 2018-11-07 20:50:21,016 basehttp 124 "GET /addresses/ HTTP/1.1" 200 303
+INFO 2018-11-07 20:50:28,323 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:50:29,269 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+ERROR 2018-11-07 20:50:30,467 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 130, in create
+    sales = sku.count + count
+AttributeError: 'SKU' object has no attribute 'count'
+ERROR 2018-11-07 20:50:30,474 basehttp 124 "POST /orders/ HTTP/1.1" 500 20744
+ERROR 2018-11-07 20:50:31,336 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 130, in create
+    sales = sku.count + count
+AttributeError: 'SKU' object has no attribute 'count'
+ERROR 2018-11-07 20:50:31,348 basehttp 124 "POST /orders/ HTTP/1.1" 500 20722
+ERROR 2018-11-07 20:50:44,082 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 130, in create
+    sales = sku.count + count
+AttributeError: 'SKU' object has no attribute 'count'
+ERROR 2018-11-07 20:50:44,096 basehttp 124 "POST /orders/ HTTP/1.1" 500 20743
+ERROR 2018-11-07 20:50:46,150 log 228 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/orders/serializers.py", line 130, in create
+    sales = sku.count + count
+AttributeError: 'SKU' object has no attribute 'count'
+ERROR 2018-11-07 20:50:46,152 basehttp 124 "POST /orders/ HTTP/1.1" 500 20722
+INFO 2018-11-07 20:51:37,434 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+WARNING 2018-11-07 20:51:38,263 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:38,280 basehttp 124 "POST /orders/ HTTP/1.1" 400 46
+WARNING 2018-11-07 20:51:50,329 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:50,336 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+WARNING 2018-11-07 20:51:54,565 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:54,567 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+WARNING 2018-11-07 20:51:55,894 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:55,896 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+WARNING 2018-11-07 20:51:56,277 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:56,279 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+WARNING 2018-11-07 20:51:56,454 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:56,456 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+WARNING 2018-11-07 20:51:56,611 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:56,612 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+WARNING 2018-11-07 20:51:56,782 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:56,784 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+WARNING 2018-11-07 20:51:56,947 log 228 Bad Request: /orders/
+WARNING 2018-11-07 20:51:56,949 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+INFO 2018-11-07 20:52:08,711 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-07 20:52:08,823 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2018-11-07 20:52:08,869 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1112
+INFO 2018-11-07 20:52:15,704 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-11-07 20:52:19,883 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2018-11-07 20:52:19,934 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1112
+INFO 2018-11-07 20:52:33,456 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-07 20:52:33,586 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-07 20:52:37,026 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2018-11-07 20:52:37,075 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1112
+INFO 2018-11-07 20:52:40,388 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-07 20:52:40,427 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565

@@ -3,6 +3,7 @@
 # !@Author: Liu Rui
 # !@github: bigfoolliu
 import datetime
+import time
 
 from django.db import transaction
 from django_redis import get_redis_connection
@@ -71,7 +72,7 @@ class OrderCreateSerializer(serializers.Serializer):
             address = validated_data.get('address')
             pay_method = validated_data.get('pay_method')
 
-            print('pay_method:', pay_method)  # TODO:
+            # print('pay_method:', pay_method)  # TODO:
 
             # 1.创建订单信息
             total_count = 0
@@ -111,10 +112,28 @@ class OrderCreateSerializer(serializers.Serializer):
                     transaction.savepoint_rollback(sid)
                     raise serializers.ValidationError('库存不足')
 
+                """
+                当出现并发即多个用户同时对同一商品下单时，
+                先查询商品库存，再修改商品库存，会出现资源竞争问题，导致库存的最终结果出现异常
+                """
+                time.sleep(2)  # TODO: 暂停代码的执行，模拟并发事件
+
                 # 库存足够，修改库存和商品的销量,并保存到数据库
-                sku.stock -= count
-                sku.sales += count
-                sku.save()
+                # sku.stock -= count
+                # sku.sales += count
+                # sku.save()
+                """
+                乐观锁并不是真实存在的锁，而是在更新的时候判断此时的库存是否是之前查询出的库存，
+                如果相同，表示没人修改，可以更新库存，否则表示别人抢过资源，不再执行库存更新。
+                """
+                stock = sku.stock - count
+                sales = sku.sales + count
+                # 根据原始库存条件更新，返回更新的条目数，乐观锁
+                result = SKU.objects.filter(pk=sku.id, stock=sku.stock).update(stock=stock, sales=sales)
+                # 如果修改成功则返回１,失败则返回0
+                if result <= 0:
+                    transaction.savepoint_rollback(sid)
+                    raise serializers.ValidationError('当前下单人数太多，请稍后重试')
 
                 # 创建订单商品对象
                 OrderGoods.objects.create(
