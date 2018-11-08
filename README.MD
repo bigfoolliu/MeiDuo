@@ -772,3 +772,12 @@ transaction-isolation=READ-COMMITTED
 
 参考其官方文档: [支付宝开发平台登录](https://open.alipay.com/platform/home.htm)
 
+## 使用xadmin管理后台
+
+命令
+
+```text
+使用django２,因此安装xadmin版本的分支
+pip install git+git://github.com/sshwsfc/xadmin.git@django2
+```
+

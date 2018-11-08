@@ -64,6 +64,9 @@ INSTALLED_APPS = [
     'ckeditor_uploader',  # 富文本编辑器上传图片模块
     'django_crontab',  # 注册该应用使得可以实现定时生成首页静态html任务
     'haystack',  # 实现搜索的应用
+    'xadmin',  # 后台用xadmin
+    'crispy_forms',  # 后台用xadmin
+    'reversion',  # 后台用xadmin
 ]
 
 MIDDLEWARE = [
