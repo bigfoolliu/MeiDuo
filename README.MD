@@ -762,7 +762,13 @@ MySQL数据库默认使用可重复读（ Repeatable read），而使用乐观�
 ```text
 cd /etc/mysql/mysql.conf.d
 sudo vi mysqld.cnf
-更改配置:
+在配置的末尾一行添加配置:
 transaction-isolation=READ-COMMITTED
 ```
+
+## 支付宝支付
+
+对接支付宝：
+
+参考其官方文档: [支付宝开发平台登录](https://open.alipay.com/platform/home.htm)
 

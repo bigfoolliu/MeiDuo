@@ -116,7 +116,7 @@ class OrderCreateSerializer(serializers.Serializer):
                 当出现并发即多个用户同时对同一商品下单时，
                 先查询商品库存，再修改商品库存，会出现资源竞争问题，导致库存的最终结果出现异常
                 """
-                time.sleep(2)  # TODO: 暂停代码的执行，模拟并发事件
+                # time.sleep(2)  # TODO: 暂停代码的执行，模拟并发事件
 
                 # 库存足够，修改库存和商品的销量,并保存到数据库
                 # sku.stock -= count

@@ -4812,3 +4812,221 @@ INFO 2018-11-07 21:08:28,878 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200
 INFO 2018-11-07 21:08:28,897 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
 INFO 2018-11-07 21:08:31,296 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
 INFO 2018-11-07 21:08:33,431 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-11-08 09:43:29,464 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-08 09:43:29,601 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 119, in get
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 32, in loads
+    bytes_64 = my_str.encode()  # 将字符串转换为字节数据
+AttributeError: 'NoneType' object has no attribute 'encode'
+ERROR 2018-11-08 09:43:29,613 basehttp 124 "GET /cart/ HTTP/1.1" 500 20938
+WARNING 2018-11-08 09:43:36,845 log 228 Not Found: /categories/115/
+WARNING 2018-11-08 09:43:36,852 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9315
+INFO 2018-11-08 09:43:36,853 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+ERROR 2018-11-08 09:43:36,863 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 119, in get
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 32, in loads
+    bytes_64 = my_str.encode()  # 将字符串转换为字节数据
+AttributeError: 'NoneType' object has no attribute 'encode'
+ERROR 2018-11-08 09:43:36,867 basehttp 124 "GET /cart/ HTTP/1.1" 500 20946
+INFO 2018-11-08 09:43:38,152 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-08 09:43:38,234 log 228 Unauthorized: /browse_histories/
+WARNING 2018-11-08 09:43:38,244 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-11-08 09:43:40,109 log 228 Unauthorized: /browse_histories/
+WARNING 2018-11-08 09:43:40,116 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-11-08 09:43:41,594 log 228 Unauthorized: /browse_histories/
+WARNING 2018-11-08 09:43:41,597 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-08 09:43:42,501 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-11-08 09:43:44,975 basehttp 124 "GET /cart/ HTTP/1.1" 200 249
+INFO 2018-11-08 09:43:47,963 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-11-08 09:43:49,565 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-08 09:43:49,568 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+WARNING 2018-11-08 09:43:49,635 log 228 Unauthorized: /orders/settlement/
+WARNING 2018-11-08 09:43:49,635 log 228 Unauthorized: /addresses/
+WARNING 2018-11-08 09:43:49,648 basehttp 124 "GET /addresses/ HTTP/1.1" 401 35
+WARNING 2018-11-08 09:43:49,659 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 401 35
+INFO 2018-11-08 09:43:58,978 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-08 09:43:59,105 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-08 09:43:59,366 basehttp 124 "GET /cart/ HTTP/1.1" 200 249
+INFO 2018-11-08 09:44:01,363 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 271
+INFO 2018-11-08 09:44:01,386 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-08 09:44:07,053 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-11-08 09:44:07,129 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-11-08 09:44:12,815 basehttp 124 "OPTIONS /orders/20181108094407000000002/payment/ HTTP/1.1" 200 0
+ERROR 2018-11-08 09:44:12,851 log 228 Internal Server Error: /orders/20181108094407000000002/payment/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/payments/views.py", line 36, in get
+    debug=settings.ALIPAY_DEBUG,
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/alipay/__init__.py", line 81, in __init__
+    self._load_key()
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/alipay/__init__.py", line 87, in _load_key
+    with open(self._app_private_key_path) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: '/apps/payments/alipay/app_private_key.pem'
+ERROR 2018-11-08 09:44:12,854 basehttp 124 "GET /orders/20181108094407000000002/payment/ HTTP/1.1" 500 21030
+INFO 2018-11-08 09:45:40,916 basehttp 124 "GET /orders/20181108094407000000002/payment/ HTTP/1.1" 200 858
+INFO 2018-11-08 09:48:40,027 basehttp 124 "OPTIONS /payment/status/?charset=utf-8&out_trade_no=20181108094407000000002&method=alipay.trade.page.pay.return&total_amount=6776.00&sign=F6ll8YZHAgbxpDuJT4LMa5j7JIF5%2BJ2%2FMjP2cpzarCRoh9FOG8oUu9rnf5iflvpLChL97x2lFjNlGaiIZuB%2FM8p3x3jBllJfm7KB1izH1vBBdPvjYA%2FGIaYSEJ%2Bn914FEI4FxnolnPmUNTDVMfiv8niGQ86i40C0fbJmCH4pbRqtdTIKH099JbjdUtgp%2BwZF7ffln74XnDDU0AwdhCQZpQehSTLsHsL66wr0W9pO4l8zyVWVsf0IYF7Dev1njKVPaXegMftNd3sXztKUwEWfVTWF%2FRHkQlOoFHw5dymgP4ZTW6lVba2VhVUGFlQfUuEy%2Fs%2Fn5u%2BMCLGhllbLu7Z0Qg%3D%3D&trade_no=2018110822001490630501346261&auth_app_id=2016092000553612&version=1.0&app_id=2016092000553612&sign_type=RSA2&seller_id=2088102176447161&timestamp=2018-11-08+09%3A48%3A36 HTTP/1.1" 200 0
+WARNING 2018-11-08 09:48:40,052 log 228 Method Not Allowed: /payment/status/
+WARNING 2018-11-08 09:48:40,055 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20181108094407000000002&method=alipay.trade.page.pay.return&total_amount=6776.00&sign=F6ll8YZHAgbxpDuJT4LMa5j7JIF5%2BJ2%2FMjP2cpzarCRoh9FOG8oUu9rnf5iflvpLChL97x2lFjNlGaiIZuB%2FM8p3x3jBllJfm7KB1izH1vBBdPvjYA%2FGIaYSEJ%2Bn914FEI4FxnolnPmUNTDVMfiv8niGQ86i40C0fbJmCH4pbRqtdTIKH099JbjdUtgp%2BwZF7ffln74XnDDU0AwdhCQZpQehSTLsHsL66wr0W9pO4l8zyVWVsf0IYF7Dev1njKVPaXegMftNd3sXztKUwEWfVTWF%2FRHkQlOoFHw5dymgP4ZTW6lVba2VhVUGFlQfUuEy%2Fs%2Fn5u%2BMCLGhllbLu7Z0Qg%3D%3D&trade_no=2018110822001490630501346261&auth_app_id=2016092000553612&version=1.0&app_id=2016092000553612&sign_type=RSA2&seller_id=2088102176447161&timestamp=2018-11-08+09%3A48%3A36 HTTP/1.1" 405 45
+INFO 2018-11-08 09:58:00,979 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-08 09:58:01,055 log 228 Not Found: /categories/115/
+WARNING 2018-11-08 09:58:01,085 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9315
+INFO 2018-11-08 09:58:01,098 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 612
+ERROR 2018-11-08 09:58:01,252 log 228 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/carts/views.py", line 119, in get
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/utils/myjson.py", line 32, in loads
+    bytes_64 = my_str.encode()  # 将字符串转换为字节数据
+AttributeError: 'NoneType' object has no attribute 'encode'
+ERROR 2018-11-08 09:58:01,264 basehttp 124 "GET /cart/ HTTP/1.1" 500 20958
+INFO 2018-11-08 09:58:02,330 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-08 09:58:02,406 log 228 Unauthorized: /browse_histories/
+WARNING 2018-11-08 09:58:02,414 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-08 09:58:03,911 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+WARNING 2018-11-08 09:58:06,651 log 228 Unauthorized: /browse_histories/
+WARNING 2018-11-08 09:58:06,660 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-08 09:58:07,243 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-08 09:58:09,915 basehttp 124 "GET /cart/ HTTP/1.1" 200 499
+INFO 2018-11-08 09:58:11,940 basehttp 124 "PUT /cart/ HTTP/1.1" 200 40
+INFO 2018-11-08 09:58:13,226 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-08 09:58:13,239 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+WARNING 2018-11-08 09:58:13,268 log 228 Unauthorized: /addresses/
+WARNING 2018-11-08 09:58:13,289 basehttp 124 "GET /addresses/ HTTP/1.1" 401 35
+WARNING 2018-11-08 09:58:13,296 log 228 Unauthorized: /orders/settlement/
+WARNING 2018-11-08 09:58:13,310 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 401 35
+INFO 2018-11-08 09:58:21,971 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-08 09:58:22,099 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 249
+INFO 2018-11-08 09:58:22,442 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-08 09:58:22,480 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-08 09:58:25,046 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-08 09:58:27,184 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 272
+INFO 2018-11-08 09:58:27,191 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-08 09:58:31,652 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-11-08 09:58:31,727 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-11-08 09:58:33,338 basehttp 124 "OPTIONS /orders/20181108095831000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-11-08 09:58:33,436 basehttp 124 "GET /orders/20181108095831000000002/payment/ HTTP/1.1" 200 862
+INFO 2018-11-08 09:59:34,012 basehttp 124 "OPTIONS /payment/status/?charset=utf-8&out_trade_no=20181108095831000000002&method=alipay.trade.page.pay.return&total_amount=3388.00&sign=olaFS6DzzImUox3hPOa1CIKPle6%2F3TX7fsdTBJpIorS0fC7tMB5ASio34Z%2FGWvodSZvPx3vWc39%2BtcnQZJd0aZmuRFdK6w7IWb%2FoIjUm9K94RnHe51Z8n8p%2BJLnzHuCaXglunUm0gbwwOdyUcx3U7ajC3qGsQYSWdLyVCkdlzL%2BE3zovenOeuzezcfTsF%2Bca8G82yfoCGw%2FvZ%2FHPqMWV3ZK7%2FHPL4LhyVzu4xHocSb0wMn%2BQfUNMPjs8ke4ObGB%2F1MOHZ7I7UMWWcPErHaVgMDOzegEb%2B2oxzxqs%2BVAGsRZ63w0wsMc6AFQ%2BwdAYofaN1UB6jetS9HNV4uE8O5qGSw%3D%3D&trade_no=2018110822001490630501366789&auth_app_id=2016092000553612&version=1.0&app_id=2016092000553612&sign_type=RSA2&seller_id=2088102176447161&timestamp=2018-11-08+09%3A59%3A30 HTTP/1.1" 200 0
+ERROR 2018-11-08 09:59:34,035 log 228 Internal Server Error: /payment/status/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/payments/views.py", line 69, in put
+    signature = alipay_dict.pop('signature')  # 删除签名，不参与验证，alipay官档规定
+KeyError: 'signature'
+ERROR 2018-11-08 09:59:34,041 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20181108095831000000002&method=alipay.trade.page.pay.return&total_amount=3388.00&sign=olaFS6DzzImUox3hPOa1CIKPle6%2F3TX7fsdTBJpIorS0fC7tMB5ASio34Z%2FGWvodSZvPx3vWc39%2BtcnQZJd0aZmuRFdK6w7IWb%2FoIjUm9K94RnHe51Z8n8p%2BJLnzHuCaXglunUm0gbwwOdyUcx3U7ajC3qGsQYSWdLyVCkdlzL%2BE3zovenOeuzezcfTsF%2Bca8G82yfoCGw%2FvZ%2FHPqMWV3ZK7%2FHPL4LhyVzu4xHocSb0wMn%2BQfUNMPjs8ke4ObGB%2F1MOHZ7I7UMWWcPErHaVgMDOzegEb%2B2oxzxqs%2BVAGsRZ63w0wsMc6AFQ%2BwdAYofaN1UB6jetS9HNV4uE8O5qGSw%3D%3D&trade_no=2018110822001490630501366789&auth_app_id=2016092000553612&version=1.0&app_id=2016092000553612&sign_type=RSA2&seller_id=2088102176447161&timestamp=2018-11-08+09%3A59%3A30 HTTP/1.1" 500 22970
+ERROR 2018-11-08 09:59:58,126 log 228 Internal Server Error: /payment/status/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/PycharmProjects/meiduo/MeiDuo/MeiDuo/apps/payments/views.py", line 69, in put
+    signature = alipay_dict.pop('signature')  # 删除签名，不参与验证，alipay官档规定
+KeyError: 'signature'
+ERROR 2018-11-08 09:59:58,145 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20181108095831000000002&method=alipay.trade.page.pay.return&total_amount=3388.00&sign=olaFS6DzzImUox3hPOa1CIKPle6%2F3TX7fsdTBJpIorS0fC7tMB5ASio34Z%2FGWvodSZvPx3vWc39%2BtcnQZJd0aZmuRFdK6w7IWb%2FoIjUm9K94RnHe51Z8n8p%2BJLnzHuCaXglunUm0gbwwOdyUcx3U7ajC3qGsQYSWdLyVCkdlzL%2BE3zovenOeuzezcfTsF%2Bca8G82yfoCGw%2FvZ%2FHPqMWV3ZK7%2FHPL4LhyVzu4xHocSb0wMn%2BQfUNMPjs8ke4ObGB%2F1MOHZ7I7UMWWcPErHaVgMDOzegEb%2B2oxzxqs%2BVAGsRZ63w0wsMc6AFQ%2BwdAYofaN1UB6jetS9HNV4uE8O5qGSw%3D%3D&trade_no=2018110822001490630501366789&auth_app_id=2016092000553612&version=1.0&app_id=2016092000553612&sign_type=RSA2&seller_id=2088102176447161&timestamp=2018-11-08+09%3A59%3A30 HTTP/1.1" 500 23004
+INFO 2018-11-08 10:21:04,926 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-08 10:21:04,997 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-08 10:21:07,046 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-08 10:21:08,793 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-08 10:21:08,806 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-11-08 10:21:08,900 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 272
+INFO 2018-11-08 10:21:08,923 basehttp 124 "GET /addresses/ HTTP/1.1" 200 565
+INFO 2018-11-08 10:21:13,472 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-11-08 10:21:13,542 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-11-08 10:21:15,139 basehttp 124 "OPTIONS /orders/20181108102113000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-11-08 10:21:15,231 basehttp 124 "GET /orders/20181108102113000000002/payment/ HTTP/1.1" 200 854
+INFO 2018-11-08 10:21:53,455 basehttp 124 "OPTIONS /payment/status/?charset=utf-8&out_trade_no=20181108102113000000002&method=alipay.trade.page.pay.return&total_amount=3388.00&sign=c3og7q4B4cXbgs7ssi4C1oOEu5yFYUDPKtApLJRQIqGkbvDdBNsk%2BqhY7wIp5jXSOdfwS2Ar3YuJMSNP12eZWjImhKOLM5dBdFlbLoDibu4GpIQsn6g8Tn6LFUQeQcipG3zInTFOLijcahB%2BZr%2Fqezsdk47IZNl%2BWJ7zqBVEOOKsOvSWeY7mtYHAAZ4CIp6DYvTH16mhdFSmor7kacRm6mpA4XUWljQs4vVVIDRqomX8z9gycXtxLx8bvAke2MDPAbs08O8vKAmdAMvN5rHYggEBbQHsZ%2Fo83WhWyrJmQApQL93k5eFET6JPnXK1HM5AVT5HHb4%2BHtCMZGat9AzCJA%3D%3D&trade_no=2018110822001490630501351839&auth_app_id=2016092000553612&version=1.0&app_id=2016092000553612&sign_type=RSA2&seller_id=2088102176447161&timestamp=2018-11-08+10%3A21%3A50 HTTP/1.1" 200 0
+INFO 2018-11-08 10:21:53,567 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20181108102113000000002&method=alipay.trade.page.pay.return&total_amount=3388.00&sign=c3og7q4B4cXbgs7ssi4C1oOEu5yFYUDPKtApLJRQIqGkbvDdBNsk%2BqhY7wIp5jXSOdfwS2Ar3YuJMSNP12eZWjImhKOLM5dBdFlbLoDibu4GpIQsn6g8Tn6LFUQeQcipG3zInTFOLijcahB%2BZr%2Fqezsdk47IZNl%2BWJ7zqBVEOOKsOvSWeY7mtYHAAZ4CIp6DYvTH16mhdFSmor7kacRm6mpA4XUWljQs4vVVIDRqomX8z9gycXtxLx8bvAke2MDPAbs08O8vKAmdAMvN5rHYggEBbQHsZ%2Fo83WhWyrJmQApQL93k5eFET6JPnXK1HM5AVT5HHb4%2BHtCMZGat9AzCJA%3D%3D&trade_no=2018110822001490630501351839&auth_app_id=2016092000553612&version=1.0&app_id=2016092000553612&sign_type=RSA2&seller_id=2088102176447161&timestamp=2018-11-08+10%3A21%3A50 HTTP/1.1" 200 43

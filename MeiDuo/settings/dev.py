@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'contents.apps.ContentsConfig',  # 注册另一商品应用
     'carts.apps.CartsConfig',  # 购物车应用
     'orders.apps.OrdersConfig',  # 订单应用
+    'payments.apps.PaymentsConfig',  # 支付应用
 
     'rest_framework',  # 注册drf
     'corsheaders',  # 添加该应用以使项目后端支持跨域访问前端
@@ -344,3 +345,13 @@ HAYSTACK_CONNECTIONS = {
 }
 # 当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+# 支付宝第三方支付的相关配置
+ALIPAY_APPID = '2016092000553612'  # 支付宝APPID
+# 支付宝的公钥，验证支付宝回传消息使用,不是自己的公钥
+ALIPAY_PRIVATE_KEY_PATH = os.path.join(BASE_DIR, 'apps/payments/alipay/app_private_key.pem')
+ALIPAY_PUBLIC_KEY_PATH = os.path.join(BASE_DIR, 'apps/payments/alipay/alipay_public_key.pem')  # 私钥路径
+ALIPAY_DEBUG = True  # 是否支付调试
+ALIPAY_SUBJECT = '美多订单支付'  # 支付主题
+ALIPAY_RETURN_URL = 'http://www.meiduo.site:8080/pay_success.html'  # 支付成功回调地址
+ALIPAY_GATE = 'https://openapi.alipaydev.com/gateway.do?'  # 支付宝网关地址,用于支付地址拼接
