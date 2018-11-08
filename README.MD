@@ -30,7 +30,7 @@
 
 如图：
 
-![image](https://github.com/bigfoolliu/MeiDuo/tree/linux_version/images/项目整体架构.png)
+![image](images/项目整体架构.png)
 
 ## 目录说明
 
@@ -158,7 +158,7 @@ Django默认提供的认证系统中，用户的认证机制依赖Session机制�
 
     ```text
     参数名   类型    是否必须     说明
-    mobile	str	    是	        手机号
+    mobile   str    是          手机号
     ```
 
 + 返回数据: JSON
@@ -296,17 +296,17 @@ JWT的组成:
 
     ```text
     参数名          类型    是否必须     说明
-    username        str     是          用户名
-    password        str     是          密码
+    username        str     是         用户名
+    password        str     是         密码
     ```
 
 + 返回数据: JSON
 
     ```text
     参数名          类型    是否必须     说明
-    username        str     是          用户名
-    user_id         int     是          用户id
-    token           str     是          身份认证凭据
+    username        str     是         用户名
+    user_id         int     是         用户id
+    token           str     是         身份认证凭据
     ```
 
 ### 第三方登录--QQ登录
@@ -424,8 +424,8 @@ send_mail(subject, message, from_email, recipient_list,html_message=None)
 
     ```text
     参数名  类型    是否必须     说明
-    id      int     是          用户id
-    email   str     是          Email邮箱
+    id      int     是        用户id
+    email   str     是        Email邮箱
     ```
 
 ### 验证邮件后端接口
@@ -442,7 +442,7 @@ send_mail(subject, message, from_email, recipient_list,html_message=None)
 
     ```text
     参数名      类型    是否必须     说明
-    message     str     是          验证处理结果
+    message     str     是        验证处理结果
     ```
 
 ## 收货地址
@@ -466,8 +466,8 @@ send_mail(subject, message, from_email, recipient_list,html_message=None)
 
     ```text
     参数名  类型    是否必须     说明
-    id      int     是          省份id
-    name    str     是          省份名称
+    id      int     是        省份id
+    name    str     是        省份名称
     ```
 
 ### 请求城市或区县后端接口
@@ -616,7 +616,7 @@ Elasticsearch:
     参数名       类型    是否必须     说明
     sku_id	    int	    是	        商品sku_id
     count	    int	    是	        数量
-    selected	bool	否	        是否勾选，默认勾选
+    selected    bool    否	        是否勾选，默认勾选
     ```
 
 + 返回数据: JSON
@@ -625,7 +625,7 @@ Elasticsearch:
     参数名       类型    是否必须     说明
     sku_id	    int	    是	        商品sku_id
     count	    int	    是	        数量
-    selected	bool	是	        是否勾选，默认勾选
+    selected    bool    是	        是否勾选，默认勾选
     ```
 
 ### 查询购物车后端接口
@@ -636,12 +636,12 @@ Elasticsearch:
 
     ```text
     参数名               类型    是否必须     说明
-    id	                int	    是	        商品sku id
+    id                  int	    是	        商品sku id
     count	            int	    是	        数量
-    selected	        bool	是	        是否勾选，默认勾选
+    selected            bool    是	        是否勾选，默认勾选
     name	            str	    是	        商品名称
-    default_image_url	str	    是	        商品默认图片
-    price	            decimal	是	        商品单价
+    default_image_url   str	    是	        商品默认图片
+    price	            decimal 是	        商品单价
     ```
 
 ### 修改购物车后端接口
@@ -653,7 +653,7 @@ Elasticsearch:
     参数名       类型    是否必须     说明
     sku_id	    int	    是	        商品sku id
     count	    int	    是	        数量
-    selected	bool	否	        是否勾选，默认勾选
+    selected    bool    否	        是否勾选，默认勾选
     ```
 
 + 返回数据: JSON
@@ -662,7 +662,7 @@ Elasticsearch:
     参数名       类型    是否必须     说明
     sku_id	    int	    是	        商品sku id
     count	    int	    是	        数量
-    selected	bool	是	        是否勾选，默认勾选
+    selected    bool    是	        是否勾选，默认勾选
     ```
 
 ### 删除购物车后端接口
@@ -684,7 +684,7 @@ Elasticsearch:
 
     ```text
     参数名       类型    是否必须     说明
-    selected	bool	是	    是否全选，true表示全选，false表示取消全选
+    selected    bool    是         是否全选，true表示全选，false表示取消全选
     ```
 
 + 返回数据: JSON
@@ -710,13 +710,13 @@ Elasticsearch:
 
     ```text
     参数名               类型      是否必须     说明
-    freight	            decimal	    是	    运费
-    skus	            sku[]	    是	    结算的商品列表
-    id	                int	        是	    商品id
-    name	            str	        是	    商品名称
-    default_image_url	str	        是	    商品默认图片
-    price	            decimal	    是	    商品单价
-    count	            int	        是	    商品数量
+    freight	            decimal     是        运费
+    skus	            sku[]       是        结算的商品列表
+    id                  int	        是        商品id
+    name	            str	        是        商品名称
+    default_image_url   str	        是        商品默认图片
+    price	            decimal     是        商品单价
+    count	            int	        是        商品数量
     ```
 
 ### 保存订单后端接口
@@ -726,15 +726,15 @@ Elasticsearch:
 
     ```text
     参数名       类型    是否必须     说明
-    address	    int	    是	    收货地址id
-    pay_method	int	    是	    支付方式
+    address     int     是        收货地址id
+    pay_method  int     是        支付方式
     ```
 
 + 返回数据: JSON
 
     ```text
-    参数名       类型    是否必须     说明
-    order_id	char	是	        订单编号
+    参数名      类型   是否必须   说明
+    order_id   char     是      订单编号
     ```
 
 ### 下单并发问题

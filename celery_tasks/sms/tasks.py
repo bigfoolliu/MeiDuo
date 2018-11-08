@@ -23,7 +23,7 @@ def send_sms_code(mobile, code, expires, template_id):
     :return:
     """
     # CCP.sendTemplateSMS(mobile, code, expires, template_id)
-    print(code)
+    print(code)  # TODO: 临时创建，需修改为上式
 
 
 @app.task(name='test_func')
@@ -32,5 +32,5 @@ def test_func():
     测试函数
     :return:
     """
-    print('test_func processing...')
+    print('test_func processing...')  # TODO: 测试任务
 
